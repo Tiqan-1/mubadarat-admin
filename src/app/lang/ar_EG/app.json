@@ -1,0 +1,70 @@
+{
+  "app": {
+    "fields": {
+      "date": "التاريخ",
+      "description": "الوصف",
+      "thumbnail": "الصورة المصغرة",
+      "end": "تنتهي في",
+      "file type": "نوع الملف",
+      "id": "المعرف",
+      "name": "الإسم",
+      "program": "البرنامج",
+      "student": "الطالب",
+      "subscriber": "المشترك",
+      "registration end": "تاريخ إنتهاء التسجيل",
+      "registration start": "تاريخ بدء التسجيل",
+      "subscription date": "تاريخ الإشتراك",
+      "state": "الحالة",
+      "start": "تبدأ في",
+      "subject": "المادة",
+      "level": "المستوى",
+      "lesson": "الدرس",
+      "title": "العنوان",
+      "note": "الملاحظة",
+      "url": "الرابط"
+    },
+    "lessons": {
+      "grid-header": "قائمة الدروس",
+      "title": "الدروس",
+      "types": {
+        "other": "غير محدد",
+        "pdf": "ملف",
+        "video": "فيديو"
+      }
+    },
+    "levels": {
+      "grid-header": "قائمة المستويات",
+      "title": "المستويات"
+    },
+    "programs": {
+      "grid-header": "قائمة البرامج",
+      "title": "البرامج",
+      "statuses": {
+        "created": "تم إنشاءه",
+        "published": "تم نشره",
+        "suspended": "متوقف",
+        "cancelled": "ملغي",
+        "deleted": "محذوف"
+      }
+    },
+    "subjects": {
+      "grid-header": "قائمة المواد",
+      "title": "المواد"
+    },
+    "subscriptions": {
+      "grid-header": "قائمة الإشتراكات",
+      "title": "الإشتراكات",
+      "statuses": {
+        "active": "نشط",
+        "succeeded": "نجاح",
+        "failed": "فشل",
+        "suspended": "متوقف",
+        "deleted": "محذوف"
+      }
+    },
+    "tasks": {
+      "grid-header": "قائمة المهام",
+      "title": "المهام"
+    }
+  }
+}

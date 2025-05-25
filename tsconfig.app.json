@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "types": ["vite-plugin-svg-icons-ng/client"],
+    "allowJs": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+		/* Linting */
+		"strict": true, // Enable all strict type checking options
+		"strictNullChecks": true, // Strict checks for null values
+		"noImplicitAny": true, // Disallow implicit any type
+		"noUnusedLocals": true, // Eliminate warnings about unused variables
+		"noUnusedParameters": true, // Eliminate warnings about unused parameters
+		"noFallthroughCasesInSwitch": true, // Avoid switch statement traps
+		"useUnknownInCatchVariables": false, // When true, variables declared in catch blocks are treated as type unknown instead of the default any.
+    "noUncheckedSideEffectImports": true,
+    
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+	"include": ["src", "types", "tailwind.config.ts"],
+}

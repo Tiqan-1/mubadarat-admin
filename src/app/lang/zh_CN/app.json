@@ -1,0 +1,70 @@
+{
+  "app": {
+    "fields": {
+      "date": "日期",
+      "description": "描述",
+      "thumbnail": "缩略图",
+      "end": "结束于",
+      "file type": "文件类型",
+      "id": "ID",
+      "name": "名称",
+      "program": "项目",
+      "student": "学生",
+      "subscriber": "订阅者",
+      "registration end": "注册结束日期",
+      "registration start": "注册开始日期",
+      "subscription date": "订阅日期",
+      "state": "状态",
+      "start": "开始于",
+      "subject": "科目",
+      "level": "级别",
+      "lesson": "课程",
+      "title": "标题",
+      "note": "备注",
+      "url": "链接"
+    },
+    "lessons": {
+      "grid-header": "课程列表",
+      "title": "课程",
+      "types": {
+        "other": "其他",
+        "pdf": "PDF 文件",
+        "video": "视频"
+      }
+    },
+    "levels": {
+      "grid-header": "级别列表",
+      "title": "级别"
+    },
+    "programs": {
+      "grid-header": "项目列表",
+      "title": "项目",
+      "statuses": {
+        "created": "已创建",
+        "published": "已发布",
+        "suspended": "已暂停",
+        "cancelled": "已取消",
+        "deleted": "已删除"
+      }
+    },
+    "subjects": {
+      "grid-header": "科目列表",
+      "title": "科目"
+    },
+    "subscriptions": {
+      "grid-header": "订阅列表",
+      "title": "订阅",
+      "statuses": {
+        "active": "活跃",
+        "succeeded": "成功",
+        "failed": "失败",
+        "suspended": "已暂停",
+        "deleted": "已删除"
+      }
+    },
+    "tasks": {
+      "grid-header": "任务列表",
+      "title": "任务"
+    }
+  }
+}
