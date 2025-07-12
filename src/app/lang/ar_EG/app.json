@@ -20,7 +20,9 @@
       "level": "المستوى",
       "lesson": "الدرس",
       "title": "العنوان",
-      "note": "الملاحظة",
+      "note": "الملاحظة", 
+      "programSubscriptionType": "نوع الإشتراك",
+      "subscriptionFormUrl": "رابط نموذج الإشتراك",
       "url": "الرابط"
     },
     "lessons": {
@@ -39,6 +41,10 @@
     "programs": {
       "grid-header": "قائمة البرامج",
       "title": "البرامج",
+      "types": {
+        "public": "مفتوح",
+        "approval": "يحتاج موافقة"
+      },
       "statuses": {
         "created": "تم إنشاءه",
         "published": "تم نشره",

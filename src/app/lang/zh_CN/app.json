@@ -21,6 +21,8 @@
       "lesson": "课程",
       "title": "标题",
       "note": "备注",
+      "programSubscriptionType": "订阅类型",
+      "subscriptionFormUrl": "订阅表单网址",
       "url": "链接"
     },
     "lessons": {

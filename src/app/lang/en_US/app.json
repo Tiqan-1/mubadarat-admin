@@ -21,6 +21,8 @@
         "lesson": "Lesson",
         "title": "Title",
         "note": "Note",
+        "programSubscriptionType": "Subscription Type",
+        "subscriptionFormUrl": "Subscription Form Url",
         "url": "URL"
       },
       "lessons": {
