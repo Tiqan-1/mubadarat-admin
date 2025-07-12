@@ -43,6 +43,14 @@ export default function ProgramModal({ title, show, forUpload, formValue, okDisa
 		{value: 'deleted', label: (<span>{t('app.programs.statuses.deleted')}</span>)},
 	]
 
+	const subscriptionTypes : {
+		value: string;
+		label: JSX.Element;
+	}[] = [
+		{value: 'public', label: (<span>{t('app.programs.types.public')}</span>)},
+		{value: 'approval', label: (<span>{t('app.programs.types.approval')}</span>)},
+	]
+	
 	return (
 		<Modal 
 			forceRender={true} 
@@ -102,6 +110,15 @@ export default function ProgramModal({ title, show, forUpload, formValue, okDisa
 						<Input.TextArea />
 					</Form.Item>
 					
+					
+
+					<Form.Item<Program> label={t('app.fields.programSubscriptionType')} name="programSubscriptionType">
+						<Select showSearch options={subscriptionTypes}>
+						</Select>
+					</Form.Item>
+					<Form.Item<Program> label={t("app.fields.subscriptionFormUrl")} name="subscriptionFormUrl">
+						<Input />
+					</Form.Item>
 					
 					<Form.Item<Program> label={t('app.fields.start')} name="start" {...dateParser}>
 						<DatePicker/>
