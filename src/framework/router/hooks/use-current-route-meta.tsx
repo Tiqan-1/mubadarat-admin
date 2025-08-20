@@ -29,7 +29,7 @@ export function useCurrentRouteMeta() {
     // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     useEffect(() => {
         // Gets the currently matched route
-        const lastRoute = matchs.at(-1);
+        const lastRoute = matchs[-1];
         if (!lastRoute) return;
 
         const { pathname, params } = lastRoute;
