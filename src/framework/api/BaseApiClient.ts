@@ -70,8 +70,11 @@ axiosInstance.interceptors.response.use(
 	(error: AxiosError<Result>) => {
 		const { response, message } = error || {};
 
-		const errMsg = response?.data?.message || message || t("sys.api.errorMessage");
+		let errMsg = response?.data?.message || message || t("sys.api.errorMessage");
 
+		if(Array.isArray(errMsg)){
+			errMsg = errMsg.reduce((accumulator, currentValue) => `${accumulator} | ${currentValue}`, "");
+		}
 		
 		toast.error(errMsg, {
 			position: "top-center",
