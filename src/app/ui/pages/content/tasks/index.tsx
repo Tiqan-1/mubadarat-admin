@@ -1,4 +1,4 @@
-import { Button, Card, Empty, Popconfirm, Space } from "antd";
+import { Button, Card, Divider, Empty, Popconfirm, Space } from "antd";
 import Table, { type ColumnsType } from "antd/es/table"; 
 import { useTranslation } from "react-i18next";
  
@@ -96,8 +96,10 @@ export default function TaskPage() {
 
 			<TaskFilter formValue={filter} okDisabled={(isLoading || isFetching)} onClear={onClear} onSearch={onSearch} /> 
 
+    		<Divider>{t("app.tasks.grid-header")}</Divider>
+
 			<Card
-				title={t("app.tasks.grid-header")}
+				// title={t("app.tasks.grid-header")}
 				extra={ <Button type="primary" onClick={() => onCreate()}> {t('common.create')} </Button> }
 			>
 				<Table

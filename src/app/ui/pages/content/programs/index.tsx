@@ -1,4 +1,4 @@
-import { Button, Card, Popconfirm, Space } from "antd";
+import { Button, Card, Divider, Popconfirm, Space } from "antd";
 import Table, { type ColumnsType } from "antd/es/table"; 
 import { useTranslation } from "react-i18next";
  
@@ -147,6 +147,8 @@ export default function ProgramPage() {
 	return (
 		<Space direction="vertical" size="large" className="w-full">
 			<ProgramFilter formValue={filter} okDisabled={(isLoading || isFetching)} onClear={onClear} onSearch={onSearch} /> 
+
+    		<Divider>{t("app.programs.grid-header")}</Divider>
 
 			<Card
 				title={t("app.programs.grid-header")}

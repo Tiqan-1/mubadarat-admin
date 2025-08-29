@@ -1,4 +1,4 @@
-import { Button, Card, Popconfirm, Space } from "antd";
+import { Button, Card, Divider, Popconfirm, Space } from "antd";
 import Table, { type ColumnsType } from "antd/es/table"; 
 import { useTranslation } from "react-i18next";
  
@@ -105,8 +105,10 @@ export default function SubjectPage() {
 
 			<SubjectFilter formValue={filter} okDisabled={(isLoading || isFetching)} onClear={onClear} onSearch={onSearch} /> 
 
+    		<Divider>{t("app.subjects.grid-header")}</Divider>
+
 			<Card
-				title={t("app.subjects.grid-header")}
+				// title={t("app.subjects.grid-header")}
 				extra={ <Button type="primary" onClick={() => onCreate()}> {t('common.create')} </Button> }
 			>
 				<Table

@@ -1,4 +1,4 @@
-import {  Card, Popconfirm, Space, Tag } from "antd";
+import {  Card, Divider, Popconfirm, Space, Tag } from "antd";
 import Table, { type ColumnsType } from "antd/es/table"; 
 import { useTranslation } from "react-i18next";
  
@@ -110,6 +110,8 @@ export default function SubscriptionPage() {
 		<Space direction="vertical" size="large" className="w-full">
 
 			<SubscriptionFilter formValue={filter} okDisabled={(isLoading || isFetching)} onClear={onClear} onSearch={onSearch} /> 
+
+    		<Divider>{t("app.subscriptions.grid-header")}</Divider>
 
 			<Card
 				title={t("app.subscriptions.grid-header")}
