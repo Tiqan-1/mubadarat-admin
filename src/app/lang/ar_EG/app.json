@@ -1,6 +1,17 @@
 {
   "app": {
     "fields": {
+      "submittedAt": "تاريخ الإرسال",
+      "status": "الحالة",
+      "score": "النتيجة",
+      "question": "السؤال",
+      "notes": "الملاحظات",
+      "gradingStatus": "نشر التقييم",
+      "durationInMinutes": "المدة بالدقائق",
+      "passingScore": "درجة النجاح",
+      "type": "النوع",
+      "availableFrom": "متاح من",
+      "availableUntil": "متاح حتى",
       "date": "التاريخ",
       "description": "الوصف",
       "thumbnail": "الصورة المصغرة",
@@ -9,6 +20,7 @@
       "id": "المعرف",
       "name": "الإسم",
       "program": "البرنامج",
+      "assignments": "الإختبارات",
       "student": "الطالب",
       "subscriber": "المشترك",
       "registration end": "تاريخ إنتهاء التسجيل",
@@ -71,6 +83,48 @@
     "tasks": {
       "grid-header": "قائمة المهام",
       "title": "المهام"
+    },
+    "assignments": {
+      "grid-header": "قائمة الإختبارات",
+      "title": "الإختبارات",
+      "edit-assignment-form": "تعديل النموذج",
+      "types": {
+        "exam": "إختبار",
+        "homework": "واجب منزلي"
+      },
+      "states": {
+        "draft":"مسودة",
+        "published": "تم نشره",
+        "canceled":"ملغي",
+        "closed":"مغلق",
+        "deleted": "محذوف"
+      },
+      "gradingStates": {
+          "pending": "قيد الانتظار",
+          "published": "نُشرت"
+      },
+      "publish-grades": "نشر الدرجات",
+      "confirm-publishing-grades": "هل أنت متأكد من رغبتك في نشر الدرجات؟ لا يمكن التراجع عن هذا الإجراء.",
+      "grades-published-successfully": "لقد تم نشر الدرجات بنجاح."
+    },
+    "assignmentResponses": {
+        "title": "أجوبة الإختبارات",
+        "grid-header": "قائمة الأجوبة",
+        "statuses": {
+          "in_progress":"يتم الإجابة الان",
+          "submitted": "تم إرساله",
+          "graded":"تم التقييم",
+          "published": "تم نشر التقييم"
+        },
+        "grading-submission-for": "تقديم الدرجات لـ",
+        "student-answer": "إجابة الطالب",
+        "auto-grade": "النتيجة الآلية",
+        "enter-score": "أدخل النتيجة",
+        "score-out-of-range": "يجب أن تكون النتيجة بين 0 و {{max}}",
+        "final-notes-and-submission": "الملاحظات النهائية والتسليم",
+        "save-final-grade": "حفظ الدرجة النهائية",
+        "grade-saved-successfully": "تم حفظ الدرجة بنجاح",
+        "correct-answer": "الإجابة الصحيحة"
     }
   }
 }

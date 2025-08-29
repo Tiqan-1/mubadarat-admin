@@ -6,9 +6,15 @@ import type { AppRouteObject } from "@/framework/types/router";
 import DashboardLayout from "@/app/ui/layouts/dashboard";
 import { Navigate, type RouteObject, createHashRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
+import AssignmentBuilder from "@/app/ui/pages/content/assignments/builder";
 
 const { VITE_APP_HOMEPAGE: HOMEPAGE } = import.meta.env;
 
+export const  FORM_BUILDER_ROUTE: AppRouteObject = {
+	path: "builder",
+	element: <AssignmentBuilder />,
+};
+ 
 export default function Router() {
 	const permissionRoutes = usePermissionRoutes();
 
@@ -22,7 +28,7 @@ export default function Router() {
 		children: [{ index: true, element: <Navigate to={HOMEPAGE} replace /> }, ...permissionRoutes],
 	};
 
-	const routes = [AUTH_ROUTE, PROTECTED_ROUTE, ERROR_ROUTE, NO_MATCHED_ROUTE] as RouteObject[];
+	const routes = [AUTH_ROUTE, PROTECTED_ROUTE, ERROR_ROUTE, FORM_BUILDER_ROUTE, NO_MATCHED_ROUTE] as RouteObject[];
 
 	const router = createHashRouter(routes);
 

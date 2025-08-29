@@ -60,6 +60,54 @@ const routes : Permission[] = [
 	},
 	{
 		order: 1,
+		id: "assignments",
+		parentId: "",
+		label: "app.assignments.title",
+		name: "Assignments",
+		icon: "ri:newspaper-line",
+		type: PermissionType.MENU,
+		route: "assignments", 
+		component: "/content/assignments/index.tsx",
+	},
+	{
+		order: 1,
+		id: "assignments-responses-show",
+		parentId: "assignments-responses",
+		label: "app.assignmentResponses.title",
+		name: "Assignment response",
+		icon: "ri:newspaper-line",
+		type: PermissionType.MENU,
+		hide: true,
+		route: "responses/:responseId", 
+		component: "/content/assignment-responses/show.tsx",
+	},
+	{
+		order: 1,
+		id: "assignments-responses",
+		parentId: "",
+		label: "app.assignments.title",
+		name: "Assignment responses",
+		icon: "ri:newspaper-line",
+		type: PermissionType.MENU,
+    	route: 'assignments/:assignmentId/responses',
+		hide: true,
+		component: "/content/assignment-responses/index.tsx",
+		// children: [
+		// 		{
+		// 			order: 1,
+		// 			id: "assignments-responses-show",
+		// 			parentId: "assignments-responses",
+		// 			label: "app.assignments.title",
+		// 			name: "Assignment response",
+		// 			icon: "ri:newspaper-line",
+		// 			type: PermissionType.MENU,
+		// 			route: ":responseId", 
+		// 			component: "/content/assignment-responses/show.tsx",
+		// 		},
+		// ]
+	},
+	{
+		order: 1,
 		id: "subscriptions",
 		parentId: "",
 		label: "app.subscriptions.title",
@@ -69,7 +117,7 @@ const routes : Permission[] = [
 		route: "subscriptions",
 		component: "/content/subscriptions/index.tsx",
 	},
-]  ; 
+]
 
 export default routes;
  

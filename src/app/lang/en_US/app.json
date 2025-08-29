@@ -1,6 +1,7 @@
 {
     "app": {
       "fields": {
+        "gradingStatus": "Grading Status",
         "date": "Date",
         "description": "Description",
         "thumbnail": "Thumbnail",

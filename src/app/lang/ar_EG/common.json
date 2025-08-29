@@ -16,9 +16,10 @@
     "light": "فاتح",
     "dark": "داكن",
     "action": "الحدث",
-    "create": "إنشاء",
+    "create": "إضافة",
     "edit": "تعديل",
     "confirm-launch": "تأكيد الإطلاق",
-    "confirm-deleting": "تأكيد الحذف"
+    "confirm-deleting": "تأكيد الحذف",
+    "view-and-grade": "View & Grade"
   }
 }
