@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
       port: 1111,
       proxy: {
         "/api": {
-          target: "https://officially-together-joey.ngrok-free.app/",
+          target: "https://mubadarah.ce-svcs.cc/",
           changeOrigin: true,
           // rewrite: (path) => path.replace(/^\/api/, ""),
           secure: false,
