@@ -1,6 +1,7 @@
 {
   "app": {
     "fields": {
+      "hasChatRoom": "إتاحة غرفة محادثة",
       "submittedAt": "تاريخ الإرسال",
       "status": "الحالة",
       "score": "النتيجة",

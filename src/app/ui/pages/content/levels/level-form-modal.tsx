@@ -71,10 +71,10 @@ export default function LevelModal({ title, show, formValue, okDisabled, onOk, o
 				</Form.Item>
 
 				<Form.Item<Level> label={t('app.fields.start')} name="start" {...dateParser} rules={[{ required: true }]}>
-					<DatePicker/>
+					<DatePicker style={{ width: '100%' }}/>
 				</Form.Item>
 				<Form.Item<Level> label={t('app.fields.end')} name="end" {...dateParser} rules={[{ required: true }]}>
-					<DatePicker/>
+					<DatePicker style={{ width: '100%' }}/>
 				</Form.Item>
 
 				

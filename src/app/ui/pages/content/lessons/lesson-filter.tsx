@@ -48,24 +48,24 @@ export default function LessonFilter({ formValue, okDisabled, onSearch, onClear 
 		<Card>
 			<Form form={form} onFinish={onSearch} disabled={okDisabled} initialValues={{...formValue}}>
 				<Row gutter={[16, 16]}>
-					<Col span={6} lg={6}>
+					<Col span={24} lg={6}>
 						<Form.Item<SearchFormFieldType> label={t('app.fields.subject')} name="subjectId" className="!mb-0">
 							<Select showSearch options={subjectsOptions}>
 							</Select>
 						</Form.Item>
 					</Col>
-					<Col span={6} lg={6}>
+					<Col span={24} lg={6}>
 						<Form.Item<SearchFormFieldType> label={t('app.fields.title')} name="title" className="!mb-0">
 							<Input />
 						</Form.Item>
 					</Col>
-					<Col span={6} lg={6}>
+					<Col span={24} lg={6}>
 						<Form.Item<SearchFormFieldType>  label={t('app.fields.file type')} name="type">
 							<Select showSearch options={fileOptions}>
 							</Select>
 						</Form.Item>
 					</Col>
-					<Col span={6} lg={6}>
+					<Col span={24} lg={6}>
 						<div className="flex justify-end">
 							<Space>
 								<Button onClick={onSearchFormReset}>{t("common.reset")}</Button>

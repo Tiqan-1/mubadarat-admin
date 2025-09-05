@@ -3,12 +3,13 @@ import { Button, Card, Col, Form, Row, Select, Space } from "antd";
 import api from "@/app/api/services/levels";
 
 import type { Task } from "@/app/api/services/tasks";
-import { type JSX, useEffect } from "react";
+import programsApi from "@/app/api/services/programs";
+import { type JSX, useEffect, useState } from "react";
 import { t } from "i18next";
 import { useQuery } from "@tanstack/react-query";
  
 
-type SearchFormFieldType = Pick<Task, "levelId">;
+type SearchFormFieldType = Pick<Task, "levelId"|"programId">;
 
 export type TaskFilterProps = {
 	formValue: Partial<Task>;
@@ -19,8 +20,11 @@ export type TaskFilterProps = {
 
 export default function TaskFilter({ formValue, okDisabled, onSearch, onClear }: TaskFilterProps) {
 	const [form] = Form.useForm(); 
+	const [programId, setProgramId] = useState<string|undefined>(undefined);
 	
-    const {data} = useQuery({queryKey: ['levels'], queryFn: () => api.get({}), refetchOnWindowFocus:false}); 
+    const {data} = useQuery({queryKey: ['levels', programId], queryFn: () => api.get({programId:programId}), refetchOnWindowFocus:false}); 
+
+	const programs = useQuery({queryKey: ['programs'], queryFn: () => programsApi.get(), refetchOnWindowFocus:false}); 
 
 	const levelsOptions : {
 		value: string;
@@ -34,11 +38,27 @@ export default function TaskFilter({ formValue, okDisabled, onSearch, onClear }:
 		form.resetFields();
 		onClear();
 	};
+	
+	const programsOptions : {
+		value: string;
+		label: JSX.Element;
+	}[]| undefined = programs.data?.items.map(({id, name}) => ({value: id, label: (<span>{name}</span>)}))
+	programsOptions?.unshift({value: '', label: (<span>{''}</span>)})
+
+	const handleChangeProgram = (value:any) => {
+		setProgramId(value); 
+	};
 
 	return ( 
 		<Card>
 			<Form form={form} onFinish={onSearch} disabled={okDisabled} initialValues={{...formValue}}>
 				<Row gutter={[16, 16]}>
+					<Col span={24} lg={6}>
+						<Form.Item<SearchFormFieldType> label={t('app.fields.program')} name="programId">
+							<Select showSearch options={programsOptions} onChange={handleChangeProgram}>
+							</Select>
+						</Form.Item>
+					</Col>
 					<Col span={24} lg={6}>
 						<Form.Item<SearchFormFieldType> label={t('app.fields.level')} name="levelId" className="!mb-0">
 							<Select showSearch options={levelsOptions}>

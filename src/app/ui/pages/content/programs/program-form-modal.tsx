@@ -121,17 +121,17 @@ export default function ProgramModal({ title, show, forUpload, formValue, okDisa
 					</Form.Item>
 					
 					<Form.Item<Program> label={t('app.fields.start')} name="start" {...dateParser}>
-						<DatePicker/>
+						<DatePicker style={{ width: '100%' }}/>
 					</Form.Item>
 					<Form.Item<Program> label={t('app.fields.end')} name="end" {...dateParser}>
-						<DatePicker/>
+						<DatePicker style={{ width: '100%' }}/>
 					</Form.Item>
 
 					<Form.Item<Program> label={t('app.fields.registration start')} name="registrationStart" {...dateParser}>
-						<DatePicker/>
+						<DatePicker style={{ width: '100%' }}/>
 					</Form.Item>
 					<Form.Item<Program> label={t('app.fields.registration end')} name="registrationEnd" {...dateParser}>
-						<DatePicker/>
+						<DatePicker style={{ width: '100%' }}/>
 					</Form.Item> 
 				</>)
 				 

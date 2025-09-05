@@ -60,7 +60,7 @@ export interface Program {
 	state: string
 	thumbnail: any
 	description: string
-	programSubscriptionType: "public"|"approval" //public, approval
+	programSubscriptionType: "public"|"approval"
 	subscriptionFormUrl: string
 	createdBy: CreatedBy
 	start: string

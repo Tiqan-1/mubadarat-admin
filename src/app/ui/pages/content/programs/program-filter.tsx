@@ -42,23 +42,23 @@ export default function ProgramFilter({ formValue, okDisabled, onSearch, onClear
 							<Input />
 						</Form.Item>
 					</Col>
-					<Col span={6} lg={6}>
+					<Col span={24} lg={6}>
 						<Form.Item<SearchFormFieldType> label={t('app.fields.programSubscriptionType')} name="programSubscriptionType" className="!mb-0">
 							<Select showSearch options={subscriptionTypes}>
 							</Select>
 						</Form.Item>
 					</Col>
-					<Col span={24} lg={6}>
+					<Col lg={6} xs={24}>
 						<Form.Item<SearchFormFieldType> label={t('app.fields.start')} name="start" className="!mb-0">
-							<DatePicker/>
+							<DatePicker style={{ width: '100%' }}/>
 						</Form.Item>
 					</Col>
-					<Col span={24} lg={6}>
+					<Col lg={6} xs={24}>
 						<Form.Item<SearchFormFieldType> label={t('app.fields.end')} name="end" className="!mb-0">
-							<DatePicker/>
+							<DatePicker style={{ width: '100%' }}/>
 						</Form.Item>
 					</Col>
-					<Col span={24} lg={6}>
+					<Col lg={6} xs={24}>
 						<div className="flex justify-end">
 							<Space>
 								<Button onClick={onSearchFormReset}>{t("common.reset")}</Button>
