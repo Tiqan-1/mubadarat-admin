@@ -36,11 +36,13 @@ export interface CreateRequest extends Omit<Partial<Task>, 'lessons'> {
 export interface Task { 
 	id: string
 	note: string
-	programId: string
 	levelId: string
+	programId?: string // for ux
 	subjectId: string
 	date: string
 	lessons: Lesson[]
+	chatRoomId: string
+	hasChatRoom: boolean
 }
 
 export interface Lesson {

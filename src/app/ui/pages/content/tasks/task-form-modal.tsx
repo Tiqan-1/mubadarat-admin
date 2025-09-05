@@ -1,4 +1,4 @@
-import { DatePicker, Form, Input, Modal, Select } from "antd"; 
+import { DatePicker, Form, Input, Modal, Select, Checkbox } from "antd"; 
  
 
 import type { CreateRequest, Task } from "@/app/api/services/tasks";
@@ -125,11 +125,15 @@ export default function TaskModal({ title, show, formValue, okDisabled, onOk, on
 
 
 				<Form.Item<CreateRequest> label={t('app.fields.date')} name="date" {...dateParser} rules={[{ required: true }]}>
-					<DatePicker/>
+					<DatePicker style={{ width: '100%' }}/>
 				</Form.Item>
 
 				<Form.Item<CreateRequest> label={t('app.fields.note')} name="note" >
 					<Input.TextArea/>
+				</Form.Item>
+
+				<Form.Item<CreateRequest> label={null} name="hasChatRoom" valuePropName="checked" >
+					<Checkbox>{t('app.fields.hasChatRoom')}</Checkbox>
 				</Form.Item>
 				
 		</Modal>
