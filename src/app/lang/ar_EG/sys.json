@@ -37,6 +37,15 @@
         "timeoutMessage": "انتهت مهلة تسجيل الدخول، يرجى تسجيل الدخول مرة أخرى!"
       },
       "login": {
+        "resetButtonTitle": "إعادة تعيين كلمة المرور",
+        "resetFormTitle": "إعادة تعيين كلمة المرور",
+        "iHaveAResetCode": "لدي رمز إعادة التعيين",
+        "resetCodePlaceholder": "يرجى إدخال رمز إعادة التعيين المرسل إليك",
+        "resetCode": "رمز إعادة التعيين",
+        "resetCodeSentSuccessfuly": "تم إرسال رمز تغيير كلمة المرور إلى بريدك الإلكتروني",
+        "passwordChangedSuccessfuly": "تم تغيير كلمة المرور بنجاح",
+        "verificationCodeSentSuccessfuly": "تم إرسال رابط التفعيل إلى بريدك الإلكتروني",
+        
         "name": "الاسم",
         "namePlaceholder": "يرجى إدخال الاسم",
         "userName": "اسم مستخدم",
@@ -49,7 +58,7 @@
         "emailPlaceholder": "يرجى إدخال البريد الإلكتروني",
         "emailValidation": "يرجى إدخال بريد إلكتروني صحيح",
         "forgetFormSecondTitle": "يرجى إدخال عنوان البريد الإلكتروني المرتبط بحسابك وسنرسل لك رابطًا لإعادة تعيين كلمة المرور الخاصة بك.",
-        "forgetFormTitle": "إعادة تعيين كلمة المرور",
+        "forgetFormTitle": "طلب إعادة تعيين كلمة المرور",
         "forgetPassword": "نسيت كلمة المرور؟",
         "loginButton": "تسجيل الدخول",
         "signupSuccessTitle": "تم تسجيل الحساب بنجاح",
@@ -70,7 +79,7 @@
         "registerButton": "التسجيل",
         "rememberMe": "تذكرني",
         "scanSign": "مسح الرمز لإكمال تسجيل الدخول",
-        "sendEmailButton": "إرسال بريد إلكتروني",
+        "sendEmailButton": "إرسال رمز التعيين",
         "sendSmsButton": "إرسال رمز SMS",
         "sendSmsText": "إعادة الاستحواذ في {{second}}s",
         "signInFormTitle": "تسجيل الدخول",

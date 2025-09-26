@@ -97,21 +97,25 @@ export const useSignIn = () => {
 
 
 export const useSignUP = () => {
-	const navigate = useNavigate();
-	const { setUserToken, setUserInfo } = useUserActions();
+	// const navigate = useNavigate();
+	// const { setUserToken, setUserInfo } = useUserActions();
 
 	const signUpMutation = useMutation({
 		mutationFn: authService.signUp,
+		// onSuccess() {
+		// 	toast.success(t("sys.login.verificationCodeSentSuccessfuly"));
+		// },
 	});
 
 	const signUp = async (data: SignUpReq) => {
 		try {
-			const res = await signUpMutation.mutateAsync(data);
-			const { accessToken, refreshToken } = res;
-			setUserToken({ accessToken, refreshToken });
-			setUserInfo(makeUser(res));
-			navigate(HOMEPAGE, { replace: true });
-			toast.success(t("sys.login.signupSuccessTitle"));
+			await signUpMutation.mutateAsync(data);
+			toast.success(t("sys.login.verificationCodeSentSuccessfuly"));
+			// const { accessToken, refreshToken } = res;
+			// setUserToken({ accessToken, refreshToken });
+			// setUserInfo(makeUser(res));
+			// navigate(HOMEPAGE, { replace: true });
+			// toast.success(t("sys.login.signupSuccessTitle"));
 		} catch (err) {
 			toast.error(err.message, {
 				position: "top-center",

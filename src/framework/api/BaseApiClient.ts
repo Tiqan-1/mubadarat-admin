@@ -54,7 +54,8 @@ axiosInstance.interceptors.request.use(
 // Response Interception
 axiosInstance.interceptors.response.use(
 	(res: AxiosResponse) => {
-		if (!res.data && res.status!==204) throw new Error(t("sys.api.apiRequestFailed"));
+		// console.log(res.status);
+		if (!res.data && res.status!==204 && res.status!==201) throw new Error(t("sys.api.apiRequestFailed"));
 
 		return res.data;
 

@@ -14,6 +14,7 @@ import MobileForm from "./MobileForm";
 import QrCodeFrom from "./QrCodeForm";
 import RegisterForm from "./RegisterForm";
 import ResetForm from "./ResetForm";
+import ForgotForm from "./ForgotForm";
 import { LoginStateProvider } from "./providers/LoginStateProvider";
 
 const { VITE_APP_HOMEPAGE: HOMEPAGE } = import.meta.env;
@@ -48,6 +49,7 @@ function Login() {
 					<QrCodeFrom />
 					<RegisterForm />
 					<ResetForm />
+					<ForgotForm />
 				</LoginStateProvider>
 			</div>
 

@@ -60,25 +60,25 @@ function LoginForm() {
 				<Form.Item name="password" rules={[{ required: true, message: t("sys.login.passwordPlaceholder") }]}>
 					<Input.Password type="password" placeholder={t("sys.login.password")} />
 				</Form.Item>
-				{/* <Form.Item>
+				<Form.Item>
 					<Row align="middle">
-						<Col span={12}>
+						{/* <Col span={12}>
 							<Form.Item name="remember" valuePropName="checked" noStyle>
 								<Checkbox>{t("sys.login.rememberMe")}</Checkbox>
 							</Form.Item>
-						</Col>
-						<Col span={12} className="text-right">
+						</Col> */}
+						<Col span={24} className="text-center">
 							<Button
 								type="link"
-								className="!underline"
-								onClick={() => setLoginState(LoginStateEnum.RESET_PASSWORD)}
+								className="!underline center"
+								onClick={() => setLoginState(LoginStateEnum.FORGOT_PASSWORD)}
 								size="small"
 							>
 								{t("sys.login.forgetPassword")}
 							</Button>
 						</Col>
 					</Row>
-				</Form.Item> */}
+				</Form.Item>
 				<Form.Item>
 					<Button type="primary" htmlType="submit" className="w-full" loading={loading}>
 						{t("sys.login.loginButton")}

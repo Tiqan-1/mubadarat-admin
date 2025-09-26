@@ -1,4 +1,4 @@
-import apiClient from "@/framework/api/BaseApiClient";
+import apiClient, { _route } from "@/framework/api/BaseApiClient";
 
 import type { UserInfo, UserToken } from "@/framework/types/entity";
 
@@ -9,6 +9,17 @@ export interface SignInReq {
 export interface SignUpReq extends SignInReq {
 	name: string;
 }
+
+export interface ForgotReq {
+	email: string;
+}
+export interface ResetReq{
+	email: string;
+	password: string;
+	code: string;
+}
+
+//
 export type SignInRes = UserToken & UserInfo;
 
 export enum AuthApi {
@@ -18,6 +29,10 @@ export enum AuthApi {
 	signUpStudent = "/students/sign-up",
 	logout = "/authentication/logout",
 	refresh = "/authentication/refresh-tokens",
+	
+	forgot = "/authentication/forgot-password/:email",
+	reset = "/authentication/change-password",
+	
 	//
 	users = "/users",
 	tokenExpired = "/user/tokenExpired",
@@ -30,6 +45,10 @@ const signUpStudent = (data: SignUpReq) => apiClient.post<SignInRes>({ url: Auth
 const refreshTokens = (data: {refreshToken:string}) => apiClient.post<UserToken>({ url: AuthApi.refresh, data });
 const logout = () => apiClient.get({ url: AuthApi.logout });
 //
+const forgotPassword = (data: ForgotReq) => apiClient.get({ url: _route(AuthApi.forgot, {email:data.email}), data });
+const resetPassword = (data: ResetReq) => apiClient.put({ url: AuthApi.reset, data });
+//
+//
 const users = () => apiClient.get<UserInfo[]>({ url: AuthApi.users });
 const tokenExpired = () => apiClient.post({ url: AuthApi.tokenExpired });
 
@@ -40,6 +59,9 @@ export default {
 	signUpStudent,
 	refreshTokens,
 	logout,
+	//
+	forgotPassword,
+	resetPassword,
 	//
 	tokenExpired,
 	users,
