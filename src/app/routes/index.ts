@@ -62,7 +62,7 @@ const routes : Permission[] = [
 		order: 1,
 		id: "assignments",
 		parentId: "",
-		label: "app.assignments.title",
+		label: "app.assignments.menu-title",
 		name: "Assignments",
 		icon: "solar:clipboard-list-broken",
 		type: PermissionType.MENU,

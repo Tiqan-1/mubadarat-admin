@@ -10,6 +10,7 @@ import { useQuery } from "@tanstack/react-query";
 import levelsApi from "@/app/api/services/levels";
 import lessonsApi from "@/app/api/services/lessons";
 import subjectsApi from "@/app/api/services/subjects";
+import assignmentsApi from "@/app/api/services/assignments";
 import programsApi from "@/app/api/services/programs";
 
 export type TaskModalProps = {
@@ -30,6 +31,7 @@ export default function TaskModal({ title, show, formValue, okDisabled, onOk, on
 	const programs = useQuery({queryKey: ['programs'], queryFn: () => programsApi.get(), refetchOnWindowFocus:false}); 
 	const levels = useQuery({queryKey: ['levels', programId], queryFn: () => levelsApi.get({programId}), refetchOnWindowFocus:false}); 
 	const subjects = useQuery({queryKey: ['subjects'], queryFn: () => subjectsApi.get({}), refetchOnWindowFocus:false}); 
+	const assignments = useQuery({queryKey: ['assignments'], queryFn: () => assignmentsApi.get({}), refetchOnWindowFocus:false}); 
     const lessons = useQuery({queryKey: ['lessons', subjectId], queryFn: () => lessonsApi.get({subjectId}), refetchOnWindowFocus:false}); 
 
 	const programsOptions : {
@@ -43,6 +45,10 @@ export default function TaskModal({ title, show, formValue, okDisabled, onOk, on
 		label: JSX.Element;
 	}[]| undefined = levels.data?.items.map(({id, name}) => ({value: id, label: (<span>{name}</span>)}))
 	
+	const assignmentsOptions : {
+		value: string;
+		label: JSX.Element;
+	}[]| undefined = assignments.data?.items.map(({id, title}) => ({value: id, label: (<span>{title}</span>)}))
 	const subjectsOptions : {
 		value: string;
 		label: JSX.Element;
@@ -53,12 +59,13 @@ export default function TaskModal({ title, show, formValue, okDisabled, onOk, on
 		label: JSX.Element;
 	}[]| undefined = lessons.data?.items.map(({id, title}) => ({value: id, label: (<span>{title}</span>)}))
 
+	
 	const handleChangeSubject = (value:any) => {
 		setSubjectId(value); 
-	  };
-	  const handleChangeProgram = (value:any) => {
-		  setProgramId(value); 
-		};
+	};
+	const handleChangeProgram = (value:any) => {
+		setProgramId(value); 
+	};
 	  
 	
 	const dateParser = {
@@ -111,7 +118,7 @@ export default function TaskModal({ title, show, formValue, okDisabled, onOk, on
 					</Select>
 				</Form.Item>
 
-				<Form.Item<CreateRequest> label={t('app.lessons.title')} name="lessonIds" rules={[{ required: true }]}>
+				<Form.Item<CreateRequest> label={t('app.lessons.title')} name="lessonIds">
 					<Select
 						mode="multiple"
 						allowClear
@@ -121,6 +128,11 @@ export default function TaskModal({ title, show, formValue, okDisabled, onOk, on
 						// onChange={handleChange}
 						options={lessonsOptions}
 						/>
+				</Form.Item>
+
+				<Form.Item<CreateRequest> label={t('app.fields.assignment')} name="assignmentId">
+					<Select showSearch options={assignmentsOptions}>
+					</Select>
 				</Form.Item>
 
 

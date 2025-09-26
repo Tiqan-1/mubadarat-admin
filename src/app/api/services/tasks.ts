@@ -1,4 +1,5 @@
-import apiClient, {_cleanParams, _route, type PaginationResponse} from "@/framework/api/BaseApiClient";;  
+import type { Assignment } from "./assignments";
+import apiClient, {_cleanParams, _route, type PaginationResponse} from "@/framework/api/BaseApiClient";  
 
 export enum TasksApi {
 	index = "/tasks",
@@ -31,6 +32,7 @@ export default {
 // export type B = Omit<Partial<Task>, 'lessons'> & { lessons: string[] };
 export interface CreateRequest extends Omit<Partial<Task>, 'lessons'> { 
 	lessonIds: string[]
+	assignmentId: string
 }
 
 export interface Task { 
@@ -43,6 +45,7 @@ export interface Task {
 	lessons: Lesson[]
 	chatRoomId: string
 	hasChatRoom: boolean
+	assignment?: Assignment
 }
 
 export interface Lesson {

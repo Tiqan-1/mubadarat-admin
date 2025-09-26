@@ -61,11 +61,21 @@ export default function TaskPage() {
 			title: t('app.fields.date'),
 			dataIndex: "date",
 			render: (_, record) => <div>{dayjs(record.date).format('YYYY-MM-DD')}</div>,
-		},  
+		},
+		{
+			title: t('app.fields.note'),
+			dataIndex: "note",
+			render: (_, record) => <div>{record.note}</div>,
+		},
 		{
 			title: t('app.lessons.title'),
 			dataIndex: "lessons",
-			render: (_, record) => <div>{record.lessons.map(e => e.title).join(', ')}</div>,
+			render: (_, record) => <div>{record.lessons?.map(e => e.title).join(', ') ?? '-'}</div>,
+		},
+		{
+			title: t('app.fields.assignment'),
+			dataIndex: "assignment",
+			render: (_, record) => <div>{record.assignment?.title ?? '-'}</div>,
 		},
 		{
 			title: t("common.action"),
@@ -79,6 +89,7 @@ export default function TaskPage() {
 					<IconButton onClick={() => onEdit(record)}>
 						<Iconify icon="solar:pen-bold-duotone" size={18} />
 					</IconButton>
+					<Space  style={{width:10}} > </Space>
 					<Popconfirm title={t("common.confirm-deleting")} okText={t("common.ok")} cancelText={t("common.cancel")} placement="left" onConfirm={() => onDelete(record)}>
 						<button type="button">
 							<Iconify icon="mingcute:delete-2-fill" size={18} className="text-error" />
