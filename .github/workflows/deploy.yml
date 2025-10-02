@@ -43,6 +43,7 @@ jobs:
           repository: Tiqan-1/admin
           token: ${{ secrets.DEPLOY_TOKEN }}
           path: admin-repo
+          ref: main
 
       - name: Copy build output
         run: |
@@ -62,4 +63,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Deploy from ${{ github.ref }}"
-          git push origin gh-pages
+          git push origin main
