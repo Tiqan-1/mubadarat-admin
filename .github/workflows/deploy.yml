@@ -43,7 +43,6 @@ jobs:
           repository: Tiqan-1/admin
           token: ${{ secrets.DEPLOY_TOKEN }}
           path: admin-repo
-          ref: gh-pages
 
       - name: Copy build output
         run: |
