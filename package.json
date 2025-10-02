@@ -27,6 +27,7 @@
     "dayjs": "^1.11.13",
     "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
+    "json-form-builder": "github:YassineDabbous/visual-form-builder",
     "lodash": "^4.17.21",
     "motion": "^12.5.0",
     "nprogress": "^0.2.0",
