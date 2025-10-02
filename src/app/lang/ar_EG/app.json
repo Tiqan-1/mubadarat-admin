@@ -1,41 +1,85 @@
 {
   "app": {
+    "assignmentResponses": {
+      "auto-grade": "النتيجة الآلية",
+      "correct-answer": "الإجابة الصحيحة",
+      "enter-score": "أدخل النتيجة",
+      "final-notes-and-submission": "الملاحظات النهائية والتسليم",
+      "grade-saved-successfully": "تم حفظ الدرجة بنجاح",
+      "grading-submission-for": "تقديم الدرجات لـ",
+      "grid-header": "قائمة الأجوبة",
+      "save-final-grade": "حفظ الدرجة النهائية",
+      "score-out-of-range": "يجب أن تكون النتيجة بين 0 و {{max}}",
+      "statuses": {
+        "graded": "تم التقييم",
+        "in_progress": "يتم الإجابة الان",
+        "published": "تم نشر التقييم",
+        "submitted": "تم إرساله"
+      },
+      "student-answer": "إجابة الطالب",
+      "title": "أجوبة الإختبارات"
+    },
+    "assignments": {
+      "confirm-publishing-grades": "هل أنت متأكد من رغبتك في نشر الدرجات؟ لا يمكن التراجع عن هذا الإجراء.",
+      "edit-assignment-form": "تعديل النموذج",
+      "grades-published-successfully": "لقد تم نشر الدرجات بنجاح.",
+      "gradingStates": {
+        "pending": "قيد الانتظار",
+        "published": "نُشرت"
+      },
+      "grid-header": "قائمة الإختبارات و الواجبات",
+      "publish-grades": "نشر الدرجات",
+      "states": {
+        "canceled": "ملغي",
+        "closed": "مغلق",
+        "deleted": "محذوف",
+        "draft": "مسودة",
+        "published": "تم نشره"
+      },
+      "menu-title": "الواجبات",
+      "title": "الإختبارات",
+      "types": {
+        "exam": "إختبار",
+        "homework": "واجب منزلي"
+      }
+    },
     "fields": {
-      "hasChatRoom": "إتاحة غرفة محادثة",
-      "submittedAt": "تاريخ الإرسال",
-      "status": "الحالة",
-      "score": "النتيجة",
-      "question": "السؤال",
-      "notes": "الملاحظات",
-      "gradingStatus": "نشر التقييم",
-      "durationInMinutes": "المدة بالدقائق",
-      "passingScore": "درجة النجاح",
-      "type": "النوع",
+      "assignment": "الواجب",
+      "assignments": "الإختبارات",
       "availableFrom": "متاح من",
       "availableUntil": "متاح حتى",
       "date": "التاريخ",
       "description": "الوصف",
-      "thumbnail": "الصورة المصغرة",
+      "durationInMinutes": "المدة بالدقائق",
       "end": "تنتهي في",
       "file type": "نوع الملف",
+      "gradingStatus": "نشر التقييم",
+      "hasChatRoom": "إتاحة غرفة محادثة",
       "id": "المعرف",
+      "lesson": "الدرس",
+      "level": "المستوى",
       "name": "الإسم",
+      "note": "الملاحظة",
+      "notes": "الملاحظات",
+      "passingScore": "درجة النجاح",
       "program": "البرنامج",
-      "assignments": "الإختبارات",
-      "student": "الطالب",
-      "subscriber": "المشترك",
+      "programSubscriptionType": "نوع الإشتراك",
+      "question": "السؤال",
       "registration end": "تاريخ إنتهاء التسجيل",
       "registration start": "تاريخ بدء التسجيل",
-      "subscription date": "تاريخ الإشتراك",
-      "state": "الحالة",
+      "score": "النتيجة",
       "start": "تبدأ في",
+      "state": "الحالة",
+      "status": "الحالة",
+      "student": "الطالب",
       "subject": "المادة",
-      "level": "المستوى",
-      "lesson": "الدرس",
-      "title": "العنوان",
-      "note": "الملاحظة", 
-      "programSubscriptionType": "نوع الإشتراك",
+      "submittedAt": "تاريخ الإرسال",
+      "subscriber": "المشترك",
+      "subscription date": "تاريخ الإشتراك",
       "subscriptionFormUrl": "رابط نموذج الإشتراك",
+      "thumbnail": "الصورة المصغرة",
+      "title": "العنوان",
+      "type": "النوع",
       "url": "الرابط"
     },
     "lessons": {
@@ -53,17 +97,17 @@
     },
     "programs": {
       "grid-header": "قائمة البرامج",
+      "statuses": {
+        "cancelled": "ملغي",
+        "created": "تم إنشاءه",
+        "deleted": "محذوف",
+        "published": "تم نشره",
+        "suspended": "متوقف"
+      },
       "title": "البرامج",
       "types": {
-        "public": "مفتوح",
-        "approval": "يحتاج موافقة"
-      },
-      "statuses": {
-        "created": "تم إنشاءه",
-        "published": "تم نشره",
-        "suspended": "متوقف",
-        "cancelled": "ملغي",
-        "deleted": "محذوف"
+        "approval": "يحتاج موافقة",
+        "public": "مفتوح"
       }
     },
     "subjects": {
@@ -72,60 +116,18 @@
     },
     "subscriptions": {
       "grid-header": "قائمة الإشتراكات",
-      "title": "الإشتراكات",
       "statuses": {
         "active": "نشط",
-        "succeeded": "نجاح",
+        "deleted": "محذوف",
         "failed": "فشل",
-        "suspended": "متوقف",
-        "deleted": "محذوف"
-      }
+        "succeeded": "نجاح",
+        "suspended": "متوقف"
+      },
+      "title": "الإشتراكات"
     },
     "tasks": {
       "grid-header": "قائمة المهام",
       "title": "المهام"
-    },
-    "assignments": {
-      "grid-header": "قائمة الإختبارات",
-      "title": "الإختبارات",
-      "edit-assignment-form": "تعديل النموذج",
-      "types": {
-        "exam": "إختبار",
-        "homework": "واجب منزلي"
-      },
-      "states": {
-        "draft":"مسودة",
-        "published": "تم نشره",
-        "canceled":"ملغي",
-        "closed":"مغلق",
-        "deleted": "محذوف"
-      },
-      "gradingStates": {
-          "pending": "قيد الانتظار",
-          "published": "نُشرت"
-      },
-      "publish-grades": "نشر الدرجات",
-      "confirm-publishing-grades": "هل أنت متأكد من رغبتك في نشر الدرجات؟ لا يمكن التراجع عن هذا الإجراء.",
-      "grades-published-successfully": "لقد تم نشر الدرجات بنجاح."
-    },
-    "assignmentResponses": {
-        "title": "أجوبة الإختبارات",
-        "grid-header": "قائمة الأجوبة",
-        "statuses": {
-          "in_progress":"يتم الإجابة الان",
-          "submitted": "تم إرساله",
-          "graded":"تم التقييم",
-          "published": "تم نشر التقييم"
-        },
-        "grading-submission-for": "تقديم الدرجات لـ",
-        "student-answer": "إجابة الطالب",
-        "auto-grade": "النتيجة الآلية",
-        "enter-score": "أدخل النتيجة",
-        "score-out-of-range": "يجب أن تكون النتيجة بين 0 و {{max}}",
-        "final-notes-and-submission": "الملاحظات النهائية والتسليم",
-        "save-final-grade": "حفظ الدرجة النهائية",
-        "grade-saved-successfully": "تم حفظ الدرجة بنجاح",
-        "correct-answer": "الإجابة الصحيحة"
     }
   }
 }
