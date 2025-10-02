@@ -9,7 +9,8 @@ import { useSearchParams } from "react-router";
 
 const defaultTaskValue: CreateRequest = { 
 	date: "", // "2025-02-28T23:00:00.000Z",
-	lessonIds: []
+	lessonIds: [],
+	assignmentId: ""
 };
 export function useTaskModal(onSuccess:CallableFunction){ //
 	const [searchParams] = useSearchParams();
