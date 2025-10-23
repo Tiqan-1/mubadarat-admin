@@ -54,12 +54,12 @@ export default function SubscriptionPage() {
 		mutationDelete.mutate(data.id) 
 	};
 	const columns: ColumnsType<Subscription> = [
-		{
-			title: t('app.fields.id'),
-			dataIndex: "id",
-			width: 100,
-			render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
-		},
+		// {
+		// 	title: t('app.fields.id'),
+		// 	dataIndex: "id",
+		// 	width: 100,
+		// 	render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
+		// },
 		{
 			title: t('app.fields.name'),
 			dataIndex: "name",

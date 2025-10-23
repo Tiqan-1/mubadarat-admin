@@ -75,12 +75,12 @@ export default function AssignmentPage() {
 
 
 	const columns: ColumnsType<Assignment> = [
-		{
-			title: t('app.fields.id'),
-			dataIndex: "id",
-    		width: 120,
-			render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
-		},
+		// {
+		// 	title: t('app.fields.id'),
+		// 	dataIndex: "id",
+    	// 	width: 120,
+		// 	render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
+		// },
 		{
 			title: t('app.fields.title'),
 			dataIndex: "title",

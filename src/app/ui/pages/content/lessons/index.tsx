@@ -59,14 +59,14 @@ export default function LessonPage() {
 		mutationDelete.mutate(data.id) 
 	};
 	const columns: ColumnsType<Lesson> = [
+		// {
+		// 	title: t('app.fields.id'),
+		// 	dataIndex: "id",
+		// 	width: 100,
+		// 	render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
+		// },
 		{
-			title: t('app.fields.id'),
-			dataIndex: "id",
-			width: 100,
-			render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
-		},
-		{
-			title: t('app.fields.name'),
+			title: t('app.fields.title'),
 			dataIndex: "title",
 			render: (_, record) => <div>{record.title}</div>,
 		},

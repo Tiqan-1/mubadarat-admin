@@ -53,12 +53,12 @@ export default function SubjectPage() {
 		mutationDelete.mutate(data.id) 
 	};
 	const columns: ColumnsType<Subject> = [
-		{
-			title: t('app.fields.id'),
-			dataIndex: "id",
-			width: 100,
-			render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
-		},
+		// {
+		// 	title: t('app.fields.id'),
+		// 	dataIndex: "id",
+		// 	width: 100,
+		// 	render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
+		// },
 		{
 			title: t('app.fields.name'),
 			dataIndex: "name",

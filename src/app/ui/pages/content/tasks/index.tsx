@@ -51,12 +51,12 @@ export default function TaskPage() {
 		mutationDelete.mutate(data.id) 
 	};
 	const columns: ColumnsType<Task> = [
-		{
-			title: t('app.fields.id'),
-			dataIndex: "id",
-			width: 100,
-			render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
-		},
+		// {
+		// 	title: t('app.fields.id'),
+		// 	dataIndex: "id",
+		// 	width: 100,
+		// 	render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
+		// },
 		{
 			title: t('app.fields.date'),
 			dataIndex: "date",
