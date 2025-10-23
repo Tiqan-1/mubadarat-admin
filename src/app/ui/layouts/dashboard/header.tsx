@@ -2,7 +2,7 @@ import { Drawer, Space } from "antd";
 import { type CSSProperties, useState } from "react";
 
 import { useSettings } from "@/framework/store/settingStore";
-import { IconButton,  SvgIcon } from "@/app/ui/components/icon";
+import { IconButton,  Iconify } from "@/app/ui/components/icon";
 import LocalePicker from "@/app/ui/components/locale-picker";
 import Logo from "@/app/ui/components/logo";
 
@@ -48,9 +48,11 @@ export default function Header() {
 				>
 					<div className="flex items-baseline">
 						{themeLayout !== ThemeLayout.Horizontal ? (
-							<IconButton onClick={() => setDrawerOpen(true)} className="h-10 w-10 md:hidden">
-								<SvgIcon icon="ic-menu" size="24" />
-							</IconButton>
+							<span  className="md:hidden">
+								<IconButton onClick={() => setDrawerOpen(true)}>
+									<Iconify icon="ri:menu-4-fill" size="24" />
+								</IconButton>
+							</span>
 						) : (
 							<Logo />
 						)}
