@@ -31,10 +31,7 @@ export default function LessonPage() {
 	const mutationDelete = useMutation({
 		mutationFn: (id:any) => {
 			console.log('mutationDelete', id);
-			if(filter.subjectId)	
-				return  api.destroy( filter.subjectId ,id ) ;
-			alert('Unkown lesson parent(subjectId)')
-			return Promise.resolve()
+			return  api.destroy(id) ;
 		},
 		onSuccess() {
 			refetch();
@@ -55,7 +52,7 @@ export default function LessonPage() {
 	}
 
 	const onDelete = (data: Lesson) => {
-		console.log("delete ",data);
+		// console.log("delete ", data.id);
 		mutationDelete.mutate(data.id) 
 	};
 	const columns: ColumnsType<Lesson> = [
@@ -73,7 +70,7 @@ export default function LessonPage() {
 		{
 			title: t('app.fields.file type'),
 			dataIndex: "type",
-			render: (_, record) => <Tag color={TagTypes[record.type]}>{record.type}</Tag>,
+			render: (_, record) => <Tag color={TagTypes[record.type]}>{t(`app.lessons.types.${record.type}`)}</Tag>,
 		},
 		{
 			title: t('app.fields.url'),

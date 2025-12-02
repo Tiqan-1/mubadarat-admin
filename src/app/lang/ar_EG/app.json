@@ -28,6 +28,7 @@
         "published": "نُشرت"
       },
       "grid-header": "قائمة الإختبارات و الواجبات",
+      "menu-title": "الواجبات",
       "publish-grades": "نشر الدرجات",
       "states": {
         "canceled": "ملغي",
@@ -36,7 +37,6 @@
         "draft": "مسودة",
         "published": "تم نشره"
       },
-      "menu-title": "الواجبات",
       "title": "الإختبارات",
       "types": {
         "exam": "إختبار",
@@ -92,10 +92,19 @@
       }
     },
     "levels": {
+      "errors": {
+        "startBeforeEnd": "يجب أن يكون تاريخ البدء قبل تاريخ الانتهاء"
+      },
       "grid-header": "قائمة المستويات",
       "title": "المستويات"
     },
     "programs": {
+      "errors": {
+        "programStartBeforeProgramEnd": "يجب أن يكون تاريخ بدء البرنامج قبل تاريخ انتهاء البرنامج",
+        "registrationEndBeforeProgramEnd": "يجب أن يكون تاريخ انتهاء التسجيل قبل تاريخ انتهاء البرنامج",
+        "registrationStartBeforeProgramStart": "يجب أن يكون تاريخ بدء التسجيل قبل تاريخ بدء البرنامج",
+        "registrationStartBeforeregistrationEnd": "يجب أن يكون تاريخ بدء التسجيل قبل تاريخ انتهاء التسجيل"
+      },
       "grid-header": "قائمة البرامج",
       "statuses": {
         "cancelled": "ملغي",
