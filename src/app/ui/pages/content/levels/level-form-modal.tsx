@@ -49,7 +49,20 @@ export default function LevelModal({ title, show, formValue, okDisabled, onOk, o
 				<Form 
 				form={form} 
 				initialValues={formValue}
-				onFinish={(x)=>onOk(formValue.id, x)}
+				onFinish={(x)=> {
+					// check if start is before end
+					const start = dayjs(x.start);
+					const end = dayjs(x.end);
+					if(start.isAfter(end) || start.isSame(end)){
+						form.setFields([{
+							name: 'start',
+							errors: [t('app.levels.errors.startBeforeEnd')],
+						}]);
+						return;
+					}
+
+					onOk(formValue.id, x)
+				}}
 				labelCol={{ span: 6 }} 
 				wrapperCol={{ span: 18 }} 
 				layout="horizontal">

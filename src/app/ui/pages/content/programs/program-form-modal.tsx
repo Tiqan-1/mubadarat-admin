@@ -75,7 +75,40 @@ export default function ProgramModal({ title, show, forUpload, formValue, okDisa
 				encType={forUpload ? "multipart/form-data" : undefined}
 				initialValues={formValue}
 				onFinish={forUpload ? undefined : (x)=> {
-						// console.log("onFormFinish !", x)
+						// check if registration dates are before program dates
+						const regStart = dayjs(x.registrationStart);
+						const regEnd = dayjs(x.registrationEnd);
+						const progStart = dayjs(x.start);
+						const progEnd = dayjs(x.end);
+						if(regStart.isAfter(progStart) || regStart.isSame(progStart)){
+							form.setFields([{
+								name: 'registrationStart',
+								errors: [t('app.programs.errors.registrationStartBeforeProgramStart')],
+							}]);
+							return;
+						}
+						if(regStart.isAfter(regEnd) || regStart.isSame(regEnd)){
+							form.setFields([{
+								name: 'registrationStart',
+								errors: [t('app.programs.errors.registrationStartBeforeregistrationEnd')],
+							}]);
+							return;
+						}
+						if(regEnd.isAfter(progEnd) || regEnd.isSame(progEnd)){
+							form.setFields([{
+								name: 'registrationEnd',
+								errors: [t('app.programs.errors.registrationEndBeforeProgramEnd')],
+							}]);
+							return;
+						}
+						if(progStart.isAfter(progEnd) || progStart.isSame(progEnd)){
+							form.setFields([{
+								name: 'start',
+								errors: [t('app.programs.errors.programStartBeforeProgramEnd')],
+							}]);
+							return;
+						}
+						
 						onOk(formValue.id, x)
 					}
 				}
@@ -120,17 +153,17 @@ export default function ProgramModal({ title, show, forUpload, formValue, okDisa
 						<Input />
 					</Form.Item>
 					
-					<Form.Item<Program> label={t('app.fields.start')} name="start" {...dateParser}>
+					<Form.Item<Program> label={t('app.fields.start')} name="start" {...dateParser} required  rules={[{ required: true }]}>
 						<DatePicker style={{ width: '100%' }}/>
 					</Form.Item>
-					<Form.Item<Program> label={t('app.fields.end')} name="end" {...dateParser}>
+					<Form.Item<Program> label={t('app.fields.end')} name="end" {...dateParser} required  rules={[{ required: true }]}>
 						<DatePicker style={{ width: '100%' }}/>
 					</Form.Item>
 
-					<Form.Item<Program> label={t('app.fields.registration start')} name="registrationStart" {...dateParser}>
+					<Form.Item<Program> label={t('app.fields.registration start')} name="registrationStart" {...dateParser} required  rules={[{ required: true }]}>
 						<DatePicker style={{ width: '100%' }}/>
 					</Form.Item>
-					<Form.Item<Program> label={t('app.fields.registration end')} name="registrationEnd" {...dateParser}>
+					<Form.Item<Program> label={t('app.fields.registration end')} name="registrationEnd" {...dateParser} required  rules={[{ required: true }]}>
 						<DatePicker style={{ width: '100%' }}/>
 					</Form.Item> 
 				</>)

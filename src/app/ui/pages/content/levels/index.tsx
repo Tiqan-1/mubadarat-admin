@@ -14,7 +14,7 @@ import LevelFilter  from "./level-filter";
 import { useEffect, useState } from "react"; 
 import { useNavigate, useSearchParams } from "react-router";
 import dayjs from "dayjs";
-import Paragraph from "antd/es/typography/Paragraph";
+// import Paragraph from "antd/es/typography/Paragraph";
  
 export default function LevelPage() {
 	const navigate = useNavigate();
@@ -57,12 +57,12 @@ export default function LevelPage() {
 		mutationDelete.mutate(data.id) 
 	};
 	const columns: ColumnsType<Level> = [
-		{
-			title: t('app.fields.id'),
-			dataIndex: "id",
-			width: 100,
-			render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
-		},
+		// {
+		// 	title: t('app.fields.id'),
+		// 	dataIndex: "id",
+		// 	width: 100,
+		// 	render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
+		// },
 		{
 			title: t('app.fields.name'),
 			dataIndex: "name",

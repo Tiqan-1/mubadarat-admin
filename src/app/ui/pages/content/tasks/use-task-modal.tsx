@@ -6,6 +6,7 @@ import   api from "@/app/api/services/tasks";
 import { useMutation } from "@tanstack/react-query";
 import { t } from "i18next";
 import { useSearchParams } from "react-router";
+import { removeEmptyValues } from "@/framework/api/helpers";
 
 const defaultTaskValue: CreateRequest = { 
 	date: "", // "2025-02-28T23:00:00.000Z",
@@ -20,7 +21,8 @@ export function useTaskModal(onSuccess:CallableFunction){ //
 	const mutation = useMutation({
 		mutationFn: (obj:{id:string|undefined,data:any}) => {
 			// console.log('mutationFn', obj);
-			return (obj.id!==undefined ? api.update(  obj.id, obj.data ) : api.create( obj.data  ));
+			const cleanData = removeEmptyValues(obj.data)
+			return (obj.id!==undefined ? api.update(  obj.id, cleanData as any ) : api.create( cleanData as any  ));
 		},
 		onSuccess : ()=>{
 			// console.log('onSuccess');

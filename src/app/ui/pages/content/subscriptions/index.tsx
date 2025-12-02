@@ -14,7 +14,7 @@ import SubscriptionFilter  from "./subscription-filter";
 import { useState } from "react"; 
 import { useSearchParams } from "react-router";
 import type { PresetStatusColorType } from "antd/es/_util/colors";
-import Paragraph from "antd/es/typography/Paragraph";
+// import Paragraph from "antd/es/typography/Paragraph";
  
  const TagTypes : {[k:string]: PresetStatusColorType} = {
 	'active': "processing",
@@ -54,12 +54,12 @@ export default function SubscriptionPage() {
 		mutationDelete.mutate(data.id) 
 	};
 	const columns: ColumnsType<Subscription> = [
-		{
-			title: t('app.fields.id'),
-			dataIndex: "id",
-			width: 100,
-			render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
-		},
+		// {
+		// 	title: t('app.fields.id'),
+		// 	dataIndex: "id",
+		// 	width: 100,
+		// 	render: (_, record) => <Paragraph copyable ellipsis>{record.id}</Paragraph>,
+		// },
 		{
 			title: t('app.fields.name'),
 			dataIndex: "name",

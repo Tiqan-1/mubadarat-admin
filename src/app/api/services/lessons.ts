@@ -7,7 +7,7 @@ export enum LessonsApi {
 	create = "/lessons", 
 	show = "/lessons/:id",
 	update = "/lessons/:id",
-	delete = "/lessons/:subjectId/:id", // @TODO
+	delete = "/lessons/:id",
 }
 
 export interface CreateRequest extends Partial<Lesson>{ 
@@ -17,7 +17,7 @@ const get = (params: {[key:string]:unknown}) => apiClient.get<PaginationResponse
 const show = (id: number|string) => apiClient.get<Lesson>({ url: _route(LessonsApi.show, {id}) });
 const create = (data: CreateRequest) => apiClient.post<Lesson>({ url: LessonsApi.create, data });
 const update = (id: number|string, data: CreateRequest) => apiClient.put({ url: _route(LessonsApi.update, {id}), data });
-const destroy = (subjectId: number|string, id: number|string) => apiClient.delete({ url: _route(LessonsApi.delete, {id, subjectId}) });
+const destroy = (id: number|string) => apiClient.delete({ url: _route(LessonsApi.delete, {id}) });
 
 export default {
 	get,
