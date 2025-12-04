@@ -145,7 +145,7 @@ export default function ProgramModal({ title, show, forUpload, formValue, okDisa
 					
 					
 
-					<Form.Item<Program> label={t('app.fields.programSubscriptionType')} name="programSubscriptionType">
+					<Form.Item<Program> label={t('app.fields.programSubscriptionType')} name="programSubscriptionType" required  rules={[{ required: true }]}>
 						<Select showSearch options={subscriptionTypes}>
 						</Select>
 					</Form.Item>

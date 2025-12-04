@@ -22,6 +22,9 @@
     "assignments": {
       "confirm-publishing-grades": "هل أنت متأكد من رغبتك في نشر الدرجات؟ لا يمكن التراجع عن هذا الإجراء.",
       "edit-assignment-form": "تعديل النموذج",
+      "errors": {
+        "availableFromAfterAvailableUntil": "يجب أي يكون تاريخ إتاحة الإختبار أصغر من تاريخ غلقه"
+      },
       "grades-published-successfully": "لقد تم نشر الدرجات بنجاح.",
       "gradingStates": {
         "pending": "قيد الانتظار",
