@@ -13,13 +13,13 @@ import { faker } from "@faker-js/faker";
 import DEFAULT_PERMISSION from "@/app/routes";
 
 // ------ PATCH ------
-export const makeUser =  (res:SignInRes)  : UserInfo => ({
+export const makeUser = (res: SignInRes): UserInfo => ({
 	id: res.id ?? "1",
 	email: res.email,
 	username: res.username ?? res.email.split('@')[0],
 	avatar: res.avatar ?? faker.image.avatarGitHub(),
 	// role: res.role ?? ADMIN_ROLE,
-	permissions: res.permissions ?? DEFAULT_PERMISSION, 
+	permissions: res.permissions ?? DEFAULT_PERMISSION,
 	status: res.status ?? BasicStatus.ENABLE
 });
 // -------------------
@@ -54,7 +54,7 @@ const useUserStore = create<UserStore>()(
 			},
 		}),
 		{
-			name: "userStore", // name of the item in the storage (must be unique)
+			name: `${import.meta.env.VITE_APP_STORAGE_NAME as string}-user`,
 			storage: createJSONStorage(() => localStorage), // (optional) by default, 'localStorage' is used
 			partialize: (state) => ({
 				[StorageEnum.UserInfo]: state.userInfo,
