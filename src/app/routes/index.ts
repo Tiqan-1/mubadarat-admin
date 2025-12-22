@@ -1,8 +1,19 @@
 
 import type { Permission } from "@/framework/types/entity";
-import { PermissionType } from "@/framework/types/enum"; 
- 
-const routes : Permission[] = [
+import { PermissionType } from "@/framework/types/enum";
+
+const routes: Permission[] = [
+	{
+		order: 1,
+		id: "dashboard",
+		parentId: "",
+		label: "app.dashboard",
+		name: "Dashboard",
+		icon: "solar:widget-broken",
+		type: PermissionType.MENU,
+		route: "dashboard",
+		component: "/content/dashboard/index.tsx",
+	},
 	{
 		order: 1,
 		id: "programs",
@@ -66,7 +77,7 @@ const routes : Permission[] = [
 		name: "Assignments",
 		icon: "solar:clipboard-list-broken",
 		type: PermissionType.MENU,
-		route: "assignments", 
+		route: "assignments",
 		component: "/content/assignments/index.tsx",
 	},
 	{
@@ -78,7 +89,7 @@ const routes : Permission[] = [
 		icon: "ri:newspaper-line",
 		type: PermissionType.MENU,
 		hide: true,
-		route: "responses/:responseId", 
+		route: "responses/:responseId",
 		component: "/content/assignment-responses/show.tsx",
 	},
 	{
@@ -89,7 +100,7 @@ const routes : Permission[] = [
 		name: "Assignment responses",
 		icon: "ri:newspaper-line",
 		type: PermissionType.MENU,
-    	route: 'assignments/:assignmentId/responses',
+		route: 'assignments/:assignmentId/responses',
 		hide: true,
 		component: "/content/assignment-responses/index.tsx",
 		// children: [
@@ -120,4 +131,3 @@ const routes : Permission[] = [
 ]
 
 export default routes;
- 

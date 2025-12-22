@@ -1,5 +1,15 @@
 {
   "app": {
+    "dashboard": "仪表盘",
+    "statistics": "统计",
+    "averageScore": "平均分数",
+    "programStats": "项目统计",
+    "tasksCalendar": "任务日历",
+    "activeSubscriptions": "活跃订阅",
+    "upcomingTasks": "即将到来的任务",
+    "programName": "项目名称",
+    "subscribers": "订阅者",
+    "duration": "持续时间",
     "fields": {
       "date": "日期",
       "description": "描述",
@@ -66,7 +76,11 @@
     },
     "tasks": {
       "grid-header": "任务列表",
-      "title": "任务"
+      "title": "任务",
+      "types": {
+        "lesson": "课程",
+        "assignment": "作业"
+      }
     }
   }
 }

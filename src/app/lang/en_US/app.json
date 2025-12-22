@@ -1,73 +1,87 @@
 {
-    "app": {
-      "fields": {
-        "gradingStatus": "Grading Status",
-        "date": "Date",
-        "description": "Description",
-        "thumbnail": "Thumbnail",
-        "end": "Ends At",
-        "file type": "File Type",
-        "id": "ID",
-        "name": "Name",
-        "program": "Program",
-        "student": "Student",
-        "subscriber": "Subscriber",
-        "registration end": "Registration End Date",
-        "registration start": "Registration Start Date",
-        "subscription date": "Subscription Date",
-        "state": "State",
-        "start": "Starts At",
-        "subject": "Subject",
-        "level": "Level",
+  "app": {
+    "dashboard": "Dashboard",
+    "statistics": "Statistics",
+    "averageScore": "Average Score",
+    "programStats": "Program Statistics",
+    "tasksCalendar": "Tasks Calendar",
+    "activeSubscriptions": "Active Subscriptions",
+    "upcomingTasks": "Upcoming Tasks",
+    "programName": "Program Name",
+    "subscribers": "Subscribers",
+    "duration": "Duration",
+    "fields": {
+      "gradingStatus": "Grading Status",
+      "date": "Date",
+      "description": "Description",
+      "thumbnail": "Thumbnail",
+      "end": "Ends At",
+      "file type": "File Type",
+      "id": "ID",
+      "name": "Name",
+      "program": "Program",
+      "student": "Student",
+      "subscriber": "Subscriber",
+      "registration end": "Registration End Date",
+      "registration start": "Registration Start Date",
+      "subscription date": "Subscription Date",
+      "state": "State",
+      "start": "Starts At",
+      "subject": "Subject",
+      "level": "Level",
+      "lesson": "Lesson",
+      "title": "Title",
+      "note": "Note",
+      "programSubscriptionType": "Subscription Type",
+      "subscriptionFormUrl": "Subscription Form Url",
+      "url": "URL"
+    },
+    "lessons": {
+      "grid-header": "Lessons List",
+      "title": "Lessons",
+      "types": {
+        "other": "Other",
+        "pdf": "PDF",
+        "video": "Video"
+      }
+    },
+    "levels": {
+      "grid-header": "Levels List",
+      "title": "Levels"
+    },
+    "programs": {
+      "grid-header": "Programs List",
+      "title": "Programs",
+      "statuses": {
+        "created": "Created",
+        "published": "Published",
+        "suspended": "Suspended",
+        "cancelled": "Cancelled",
+        "deleted": "Deleted"
+      }
+    },
+    "subjects": {
+      "grid-header": "Subjects List",
+      "title": "Subjects"
+    },
+    "subscriptions": {
+      "grid-header": "Subscriptions List",
+      "title": "Subscriptions",
+      "statuses": {
+        "active": "Active",
+        "succeeded": "Succeeded",
+        "failed": "Failed",
+        "suspended": "Suspended",
+        "deleted": "Deleted"
+      }
+    },
+    "tasks": {
+      "grid-header": "Tasks List",
+      "title": "Tasks",
+      "types": {
         "lesson": "Lesson",
-        "title": "Title",
-        "note": "Note",
-        "programSubscriptionType": "Subscription Type",
-        "subscriptionFormUrl": "Subscription Form Url",
-        "url": "URL"
-      },
-      "lessons": {
-        "grid-header": "Lessons List",
-        "title": "Lessons",
-        "types": {
-          "other": "Other",
-          "pdf": "PDF",
-          "video": "Video"
-        }
-      },
-      "levels": {
-        "grid-header": "Levels List",
-        "title": "Levels"
-      },
-      "programs": {
-        "grid-header": "Programs List",
-        "title": "Programs",
-        "statuses": {
-          "created": "Created",
-          "published": "Published",
-          "suspended": "Suspended",
-          "cancelled": "Cancelled",
-          "deleted": "Deleted"
-        }
-      },
-      "subjects": {
-        "grid-header": "Subjects List",
-        "title": "Subjects"
-      },
-      "subscriptions": {
-        "grid-header": "Subscriptions List",
-        "title": "Subscriptions",
-        "statuses": {
-          "active": "Active",
-          "succeeded": "Succeeded",
-          "failed": "Failed",
-          "suspended": "Suspended",
-          "deleted": "Deleted"
-        }
-      },
-      "tasks": {
-        "grid-header": "Tasks List",
-        "title": "Tasks"
+        "assignment": "Assignment"
       }
     }
   }
+}

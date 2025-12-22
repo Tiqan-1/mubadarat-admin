@@ -1,5 +1,15 @@
 {
   "app": {
+    "dashboard": "لوحة القيادة",
+    "statistics": "الإحصائيات",
+    "averageScore": "متوسط الدرجات",
+    "programStats": "إحصائيات البرامج",
+    "tasksCalendar": "تقويم المهام",
+    "activeSubscriptions": "الاشتراكات النشطة",
+    "upcomingTasks": "المهام القادمة",
+    "programName": "اسم البرنامج",
+    "subscribers": "المشتركين",
+    "duration": "المدة",
     "assignmentResponses": {
       "auto-grade": "النتيجة الآلية",
       "correct-answer": "الإجابة الصحيحة",
@@ -139,7 +149,11 @@
     },
     "tasks": {
       "grid-header": "قائمة المهام",
-      "title": "المهام"
+      "title": "المهام",
+      "types": {
+        "lesson": "درس",
+        "assignment": "واجب"
+      }
     }
   }
 }
