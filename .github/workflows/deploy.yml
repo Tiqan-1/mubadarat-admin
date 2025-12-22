@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Staging' }}
-
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -34,33 +33,13 @@ jobs:
           echo "VITE_APP_ROUTER_MODE=${{ vars.VITE_APP_ROUTER_MODE }}" >> $GITHUB_ENV
           echo "VITE_MOCK_ENABLED=${{ vars.VITE_MOCK_ENABLED }}" >> $GITHUB_ENV
 
-      - name: Build
+      - name: Build app
         run: npm run build
 
-      - name: Checkout admin repo
-        uses: actions/checkout@v4
+      - name: Deploy to mubadarah.github.io repo
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          repository: Tiqan-1/admin
-          token: ${{ secrets.DEPLOY_TOKEN }}
-          path: admin-repo
-          ref: main
-
-      - name: Copy build output
-        run: |
-          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            rm -rf admin-repo/*
-            cp -r dist/* admin-repo/
-          else
-            rm -rf admin-repo/dev/*
-            mkdir -p admin-repo/dev
-            cp -r dist/* admin-repo/dev/
-          fi
-
-      - name: Commit and push changes
-        run: |
-          cd admin-repo
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Deploy from ${{ github.ref }}"
-          git push origin main
+          personal_token: ${{ secrets.MUBADARAH_DEPLOYMENT_TOKEN }}
+          external_repository: Mubadarah/${{ github.ref == 'refs/heads/main' && 'admin' || 'admin-dev' }}
+          publish_branch: main
+          publish_dir: ./dist
