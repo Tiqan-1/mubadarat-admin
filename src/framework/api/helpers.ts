@@ -1,3 +1,4 @@
+// remove empty values (null, empty string) from an object (request payload, response result,..)
 export function removeEmptyValues<T extends object>(obj: T): { [K in keyof T]: T[K] extends string ? (T[K] extends "" ? null : T[K]) : T[K] extends object ? (T[K] extends null ? null : ReturnType<typeof removeEmptyValues<T[K]>>) : T[K] } {
   const newObj: any = {};
 
