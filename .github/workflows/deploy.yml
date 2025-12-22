@@ -30,6 +30,7 @@ jobs:
           echo "VITE_APP_HOMEPAGE=${{ vars.VITE_APP_HOMEPAGE }}" >> $GITHUB_ENV
           echo "VITE_APP_LOCALE=${{ vars.VITE_APP_LOCALE }}" >> $GITHUB_ENV
           echo "VITE_APP_NAME=${{ vars.VITE_APP_NAME }}" >> $GITHUB_ENV
+          echo "VITE_APP_STORAGE_NAME=${{ vars.VITE_APP_STORAGE_NAME }}" >> $GITHUB_ENV
           echo "VITE_APP_ROUTER_MODE=${{ vars.VITE_APP_ROUTER_MODE }}" >> $GITHUB_ENV
           echo "VITE_MOCK_ENABLED=${{ vars.VITE_MOCK_ENABLED }}" >> $GITHUB_ENV
 
