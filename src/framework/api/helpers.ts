@@ -1,19 +1,34 @@
 // remove empty values (null, empty string) from an object (request payload, response result,..)
-export function removeEmptyValues<T extends object>(obj: T): { [K in keyof T]: T[K] extends string ? (T[K] extends "" ? null : T[K]) : T[K] extends object ? (T[K] extends null ? null : ReturnType<typeof removeEmptyValues<T[K]>>) : T[K] } {
-  const newObj: any = {};
+export function removeEmptyValues(obj: any): any {
+  // Handle Arrays: Map and Filter
+  if (Array.isArray(obj)) {
+    return obj
+      .map((item) => removeEmptyValues(item)) // Recurse first
+      .filter((item) => item !== undefined);  // Remove undefined items
+  }
 
-  for (const key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      const value = obj[key];
+  // Handle Objects
+  if (typeof obj === 'object' && obj !== null) {
+    const newObj: any = {};
+    for (const key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        const value = obj[key];
 
-      if (typeof value === 'string' && value === '') {
-        newObj[key] = undefined;
-      } else if (typeof value === 'object' && value !== null) {
-        newObj[key] = removeEmptyValues(value as object);
-      } else {
-        newObj[key] = value;
+        if (typeof value === 'string' && value === '') {
+          // Skip adding this key (effectively removing it)
+          continue;
+        } else if (typeof value === 'object' && value !== null) {
+          const cleaned = removeEmptyValues(value);
+          // Optional: Check if the cleaned object is empty and remove it too?
+          newObj[key] = cleaned;
+        } else {
+          newObj[key] = value;
+        }
       }
     }
+    return newObj;
   }
-  return newObj;
+
+  // Handle Primitives (Pass through)
+  return obj;
 }
