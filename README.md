@@ -1,54 +1,88 @@
-# React + TypeScript + Vite
+# Mubadarat Student Portal 🎓
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance E-Learning platform built with React 19, TypeScript, and Ant Design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Key Features
 
-## Expanding the ESLint configuration
+- **Permission-Based Dynamic Routing**: Flexible access control system that dynamically generates the routing tree.
+- **Advanced State Management**: Optimized data flow using Zustand (client state) and TanStack Query (server state).
+- **RTL & Multilingual Support**: Comprehensive i18n support including Arabic (RTL), English, and Chinese.
+- **Real-Time Interactions**: Integrated Pusher JS for live updates and notifications.
+- **Modular Framework Architecture**: Clean separation between core infrastructure (`src/framework`) and business logic (`src/app`).
+- **Rich UI/UX**: Premium aesthetic using Ant Design 5.x, Tailwind CSS, and Framer Motion animations.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠 Tech Stack
+
+### Frontend Core
+- **React 19** & **Vite 6**
+- **TypeScript**
+- **React Router 7** (with custom HashRouter engine)
+
+### UI & Styling
+- **Ant Design 5.x** (Primary UI Kit)
+- **Tailwind CSS 4.x** (Utility classes)
+- **Vanilla Extract** (Zero-runtime CSS-in-TS)
+- **Framer Motion** (Animations)
+- **Sonner** (High-performance toasts)
+
+### Data & State
+- **Zustand** (Persistent client state & auth)
+- **TanStack Query v5** (Server state & caching)
+- **Axios** (API communication)
+
+### Tooling & Quality
+- **Biome** (Ultra-fast linting & formatting)
+- **MSW (Mock Service Worker)** (API mocking for development)
+- **Vite Plugin SVG Icons** (Efficient icon management)
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── app/            # Application-specific logic
+│   ├── api/        # API services & mocks
+│   ├── lang/       # Localization dictionaries
+│   ├── routes/     # Permission & route definitions
+│   └── ui/         # Pages, components, & layouts
+├── framework/      # Generic "Web SDK" infrastructure
+│   ├── api/        # Base client & interceptors
+│   ├── router/     # Permission-to-Route engine
+│   ├── store/      # Global persisted stores
+│   ├── theme/      # Theme adapter & Style tokens
+│   └── utils/      # Generic helper functions
+└── assets/         # Global static assets (icons, images)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚦 Getting Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Prerequisites
+- Node.js 18+
+- npm
+
+### Installation
+```bash
+npm install
 ```
+
+### Development
+```bash
+npm run dev
+```
+
+### Build
+```bash
+npm run build
+```
+
+---
+
+## 📄 License
+MIT © Mubadarah
