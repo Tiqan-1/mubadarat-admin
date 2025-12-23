@@ -1,145 +1,197 @@
 {
-  "app": {
-    "assignmentResponses": {
-      "auto-grade": "النتيجة الآلية",
-      "correct-answer": "الإجابة الصحيحة",
-      "enter-score": "أدخل النتيجة",
-      "final-notes-and-submission": "الملاحظات النهائية والتسليم",
-      "grade-saved-successfully": "تم حفظ الدرجة بنجاح",
-      "grading-submission-for": "تقديم الدرجات لـ",
-      "grid-header": "قائمة الأجوبة",
-      "save-final-grade": "حفظ الدرجة النهائية",
-      "score-out-of-range": "يجب أن تكون النتيجة بين 0 و {{max}}",
-      "statuses": {
-        "graded": "تم التقييم",
-        "in_progress": "يتم الإجابة الان",
-        "published": "تم نشر التقييم",
-        "submitted": "تم إرساله"
-      },
-      "student-answer": "إجابة الطالب",
-      "title": "أجوبة الإختبارات"
-    },
-    "assignments": {
-      "confirm-publishing-grades": "هل أنت متأكد من رغبتك في نشر الدرجات؟ لا يمكن التراجع عن هذا الإجراء.",
-      "edit-assignment-form": "تعديل النموذج",
-      "errors": {
-        "availableFromAfterAvailableUntil": "يجب أي يكون تاريخ إتاحة الإختبار أصغر من تاريخ غلقه"
-      },
-      "grades-published-successfully": "لقد تم نشر الدرجات بنجاح.",
-      "gradingStates": {
-        "pending": "قيد الانتظار",
-        "published": "نُشرت"
-      },
-      "grid-header": "قائمة الإختبارات و الواجبات",
-      "menu-title": "الواجبات",
-      "publish-grades": "نشر الدرجات",
-      "states": {
-        "canceled": "ملغي",
-        "closed": "مغلق",
-        "deleted": "محذوف",
-        "draft": "مسودة",
-        "published": "تم نشره"
-      },
-      "title": "الإختبارات",
-      "types": {
-        "exam": "إختبار",
-        "homework": "واجب منزلي"
-      }
-    },
-    "fields": {
-      "assignment": "الواجب",
-      "assignments": "الإختبارات",
-      "availableFrom": "متاح من",
-      "availableUntil": "متاح حتى",
-      "date": "التاريخ",
-      "description": "الوصف",
-      "durationInMinutes": "المدة بالدقائق",
-      "end": "تنتهي في",
-      "file type": "نوع الملف",
-      "gradingStatus": "نشر التقييم",
-      "hasChatRoom": "إتاحة غرفة محادثة",
-      "id": "المعرف",
-      "lesson": "الدرس",
-      "level": "المستوى",
-      "name": "الإسم",
-      "note": "الملاحظة",
-      "notes": "الملاحظات",
-      "passingScore": "درجة النجاح",
-      "program": "البرنامج",
-      "programSubscriptionType": "نوع الإشتراك",
-      "question": "السؤال",
-      "registration end": "تاريخ إنتهاء التسجيل",
-      "registration start": "تاريخ بدء التسجيل",
-      "score": "النتيجة",
-      "start": "تبدأ في",
-      "state": "الحالة",
-      "status": "الحالة",
-      "student": "الطالب",
-      "subject": "المادة",
-      "submittedAt": "تاريخ الإرسال",
-      "subscriber": "المشترك",
-      "subscription date": "تاريخ الإشتراك",
-      "subscriptionFormUrl": "رابط نموذج الإشتراك",
-      "thumbnail": "الصورة المصغرة",
-      "title": "العنوان",
-      "type": "النوع",
-      "url": "الرابط"
-    },
-    "lessons": {
-      "grid-header": "قائمة الدروس",
-      "title": "الدروس",
-      "types": {
-        "other": "غير محدد",
-        "pdf": "رابط درايف",
-        "video": "فيديو يوتيوب"
-      }
-    },
-    "levels": {
-      "errors": {
-        "startBeforeEnd": "يجب أن يكون تاريخ البدء قبل تاريخ الانتهاء"
-      },
-      "grid-header": "قائمة المستويات",
-      "title": "المستويات"
-    },
-    "programs": {
-      "errors": {
-        "programStartBeforeProgramEnd": "يجب أن يكون تاريخ بدء البرنامج قبل تاريخ انتهاء البرنامج",
-        "registrationEndBeforeProgramEnd": "يجب أن يكون تاريخ انتهاء التسجيل قبل تاريخ انتهاء البرنامج",
-        "registrationStartBeforeProgramStart": "يجب أن يكون تاريخ بدء التسجيل قبل تاريخ بدء البرنامج",
-        "registrationStartBeforeregistrationEnd": "يجب أن يكون تاريخ بدء التسجيل قبل تاريخ انتهاء التسجيل"
-      },
-      "grid-header": "قائمة البرامج",
-      "statuses": {
-        "cancelled": "ملغي",
-        "created": "تم إنشاءه",
-        "deleted": "محذوف",
-        "published": "تم نشره",
-        "suspended": "متوقف"
-      },
-      "title": "البرامج",
-      "types": {
-        "approval": "يحتاج موافقة",
-        "public": "مفتوح"
-      }
-    },
-    "subjects": {
-      "grid-header": "قائمة المواد",
-      "title": "المواد"
-    },
-    "subscriptions": {
-      "grid-header": "قائمة الإشتراكات",
-      "statuses": {
-        "active": "نشط",
-        "deleted": "محذوف",
-        "failed": "فشل",
-        "succeeded": "نجاح",
-        "suspended": "متوقف"
-      },
-      "title": "الإشتراكات"
-    },
-    "tasks": {
-      "grid-header": "قائمة المهام",
-      "title": "المهام"
-    }
-  }
+	"app": {
+		"activeSubscriptions": "الاشتراكات النشطة",
+		"assignmentResponses": {
+			"auto-grade": "النتيجة الآلية",
+			"correct-answer": "الإجابة الصحيحة",
+			"enter-score": "أدخل النتيجة",
+			"final-notes-and-submission": "الملاحظات النهائية والتسليم",
+			"grade-saved-successfully": "تم حفظ الدرجة بنجاح",
+			"grading-submission-for": "تقديم الدرجات لـ",
+			"grid-header": "قائمة الأجوبة",
+			"save-final-grade": "حفظ الدرجة النهائية",
+			"score-out-of-range": "يجب أن تكون النتيجة بين 0 و {{max}}",
+			"statuses": {
+				"graded": "تم التقييم",
+				"in_progress": "يتم الإجابة الان",
+				"published": "تم نشر التقييم",
+				"submitted": "تم إرساله"
+			},
+			"student-answer": "إجابة الطالب",
+			"title": "أجوبة الإختبارات"
+		},
+		"assignments": {
+			"confirm-publishing-grades": "هل أنت متأكد من رغبتك في نشر الدرجات؟ لا يمكن التراجع عن هذا الإجراء.",
+			"edit-assignment-form": "تعديل النموذج",
+			"errors": {
+				"availableFromAfterAvailableUntil": "يجب أي يكون تاريخ إتاحة الإختبار أصغر من تاريخ غلقه"
+			},
+			"grades-published-successfully": "لقد تم نشر الدرجات بنجاح.",
+			"gradingStates": {
+				"pending": "قيد الانتظار",
+				"published": "نُشرت"
+			},
+			"grid-header": "قائمة الإختبارات و الواجبات",
+			"menu-title": "الواجبات",
+			"publish-grades": "نشر الدرجات",
+			"states": {
+				"canceled": "ملغي",
+				"closed": "مغلق",
+				"deleted": "محذوف",
+				"draft": "مسودة",
+				"published": "تم نشره"
+			},
+			"title": "الإختبارات",
+			"types": {
+				"exam": "إختبار",
+				"homework": "واجب منزلي"
+			}
+		},
+		"averageScore": "متوسط الدرجات",
+		"dashboard": "لوحة القيادة",
+		"duration": "المدة",
+		"fields": {
+			"assignment": "الواجب",
+			"assignments": "الإختبارات",
+			"availableFrom": "متاح من",
+			"availableUntil": "متاح حتى",
+			"date": "التاريخ",
+			"description": "الوصف",
+			"durationInMinutes": "المدة بالدقائق",
+			"end": "تنتهي في",
+			"file type": "نوع الملف",
+			"gradingStatus": "نشر التقييم",
+			"hasChatRoom": "إتاحة غرفة محادثة",
+			"id": "المعرف",
+			"lesson": "الدرس",
+			"level": "المستوى",
+			"name": "الإسم",
+			"note": "الملاحظة",
+			"notes": "الملاحظات",
+			"passingScore": "درجة النجاح",
+			"program": "البرنامج",
+			"programSubscriptionType": "نوع الإشتراك",
+			"question": "السؤال",
+			"registration end": "تاريخ إنتهاء التسجيل",
+			"registration start": "تاريخ بدء التسجيل",
+			"score": "النتيجة",
+			"start": "تبدأ في",
+			"state": "الحالة",
+			"status": "الحالة",
+			"student": "الطالب",
+			"subject": "المادة",
+			"submittedAt": "تاريخ الإرسال",
+			"subscriber": "المشترك",
+			"subscription date": "تاريخ الإشتراك",
+			"subscriptionFormUrl": "رابط نموذج الإشتراك",
+			"thumbnail": "الصورة المصغرة",
+			"title": "العنوان",
+			"type": "النوع",
+			"url": "الرابط"
+		},
+		"lessons": {
+			"grid-header": "قائمة الدروس",
+			"title": "الدروس",
+			"types": {
+				"other": "غير محدد",
+				"pdf": "رابط درايف",
+				"video": "فيديو يوتيوب"
+			}
+		},
+		"levels": {
+			"errors": {
+				"startBeforeEnd": "يجب أن يكون تاريخ البدء قبل تاريخ الانتهاء"
+			},
+			"grid-header": "قائمة المستويات",
+			"title": "المستويات"
+		},
+		"programName": "اسم البرنامج",
+		"programStats": "إحصائيات البرامج",
+		"programs": {
+			"builder": {
+				"addLevel": "إضافة مستوى",
+				"addTask": "إضافة مهمة",
+				"finish": "إنهاء",
+				"next": "التالي",
+				"noLevels": "لم يتم إضافة مستويات بعد. انقر على 'إضافة مستوى' للبدء.",
+				"noTasks": "لم يتم إضافة مهام لهذا المستوى بعد.",
+				"previous": "السابق",
+				"publishConfirm": "هل أنت متأكد من رغبتك في نشر هذا البرنامج؟",
+				"publishNow": "نشر الآن",
+				"publishSuccess": "تم نشر البرنامج بنجاح!",
+				"steps": {
+					"curriculum": "المنهج",
+					"details": "تفاصيل البرنامج",
+					"levels": "المستويات",
+					"publish": "نشر وإنهاء",
+					"thumbnail": "الصورة المصغرة"
+				},
+				"title": "منشئ البرامج",
+				"uploadThumbnail": "رفع الصورة"
+			},
+			"errors": {
+				"programStartBeforeProgramEnd": "يجب أن يكون تاريخ بدء البرنامج قبل تاريخ انتهاء البرنامج",
+				"registrationEndBeforeProgramEnd": "يجب أن يكون تاريخ انتهاء التسجيل قبل تاريخ انتهاء البرنامج",
+				"registrationStartBeforeProgramStart": "يجب أن يكون تاريخ بدء التسجيل قبل تاريخ بدء البرنامج",
+				"registrationStartBeforeregistrationEnd": "يجب أن يكون تاريخ بدء التسجيل قبل تاريخ انتهاء التسجيل"
+			},
+			"grid-header": "قائمة البرامج",
+			"statuses": {
+				"cancelled": "ملغي",
+				"created": "تم إنشاءه",
+				"deleted": "محذوف",
+				"published": "تم نشره",
+				"suspended": "متوقف"
+			},
+			"delete-warning": "هذا الإجراء لا يمكن التراجع عنه. سيتم حذف جميع المستويات والمهام المرتبطة بهذا البرنامج نهائياً.",
+			"delete-confirm-label": "يرجى كتابة 'delete' للتأكيد:",
+			"title": "البرامج",
+			"types": {
+				"approval": "يحتاج موافقة",
+				"public": "مفتوح"
+			}
+		},
+		"statistics": "الإحصائيات",
+		"subjects": {
+			"builder": {
+				"title": "منشئ المواد",
+				"steps": {
+					"details": "تفاصيل المادة",
+					"lessons": "الدروس",
+					"publish": "نشر وإنهاء"
+				},
+				"finish": "إنهاء",
+				"next": "التالي",
+				"previous": "السابق",
+				"publishSuccess": "تم إعداد المادة بنجاح!",
+				"publishConfirm": "لقد قمت بتهيئة المادة ودروسها بنجاح."
+			},
+			"grid-header": "قائمة المواد",
+			"delete-warning": "هذا الإجراء لا يمكن التراجع عنه. سيتم حذف جميع الدروس المرتبطة بهذه المادة نهائياً.",
+			"delete-confirm-label": "يرجى كتابة 'delete' للتأكيد:",
+			"title": "المواد"
+		},
+		"subscribers": "المشتركين",
+		"subscriptions": {
+			"grid-header": "قائمة الإشتراكات",
+			"statuses": {
+				"active": "نشط",
+				"deleted": "محذوف",
+				"failed": "فشل",
+				"succeeded": "نجاح",
+				"suspended": "متوقف"
+			},
+			"title": "الإشتراكات"
+		},
+		"tasks": {
+			"grid-header": "قائمة المهام",
+			"title": "المهام",
+			"types": {
+				"assignment": "واجب",
+				"lesson": "درس"
+			}
+		},
+		"tasksCalendar": "تقويم المهام",
+		"upcomingTasks": "المهام القادمة"
+	}
 }

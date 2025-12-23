@@ -1,73 +1,126 @@
 {
-    "app": {
-      "fields": {
-        "gradingStatus": "Grading Status",
-        "date": "Date",
-        "description": "Description",
-        "thumbnail": "Thumbnail",
-        "end": "Ends At",
-        "file type": "File Type",
-        "id": "ID",
-        "name": "Name",
-        "program": "Program",
-        "student": "Student",
-        "subscriber": "Subscriber",
-        "registration end": "Registration End Date",
-        "registration start": "Registration Start Date",
-        "subscription date": "Subscription Date",
-        "state": "State",
-        "start": "Starts At",
-        "subject": "Subject",
-        "level": "Level",
-        "lesson": "Lesson",
-        "title": "Title",
-        "note": "Note",
-        "programSubscriptionType": "Subscription Type",
-        "subscriptionFormUrl": "Subscription Form Url",
-        "url": "URL"
-      },
-      "lessons": {
-        "grid-header": "Lessons List",
-        "title": "Lessons",
-        "types": {
-          "other": "Other",
-          "pdf": "PDF",
-          "video": "Video"
-        }
-      },
-      "levels": {
-        "grid-header": "Levels List",
-        "title": "Levels"
-      },
-      "programs": {
-        "grid-header": "Programs List",
-        "title": "Programs",
-        "statuses": {
-          "created": "Created",
-          "published": "Published",
-          "suspended": "Suspended",
-          "cancelled": "Cancelled",
-          "deleted": "Deleted"
-        }
-      },
-      "subjects": {
-        "grid-header": "Subjects List",
-        "title": "Subjects"
-      },
-      "subscriptions": {
-        "grid-header": "Subscriptions List",
-        "title": "Subscriptions",
-        "statuses": {
-          "active": "Active",
-          "succeeded": "Succeeded",
-          "failed": "Failed",
-          "suspended": "Suspended",
-          "deleted": "Deleted"
-        }
-      },
-      "tasks": {
-        "grid-header": "Tasks List",
-        "title": "Tasks"
-      }
-    }
-  }
+	"app": {
+		"activeSubscriptions": "Active Subscriptions",
+		"averageScore": "Average Score",
+		"dashboard": "Dashboard",
+		"duration": "Duration",
+		"fields": {
+			"date": "Date",
+			"description": "Description",
+			"end": "Ends At",
+			"file type": "File Type",
+			"gradingStatus": "Grading Status",
+			"id": "ID",
+			"lesson": "Lesson",
+			"level": "Level",
+			"name": "Name",
+			"note": "Note",
+			"program": "Program",
+			"programSubscriptionType": "Subscription Type",
+			"registration end": "Registration End Date",
+			"registration start": "Registration Start Date",
+			"start": "Starts At",
+			"state": "State",
+			"student": "Student",
+			"subject": "Subject",
+			"subscriber": "Subscriber",
+			"subscription date": "Subscription Date",
+			"subscriptionFormUrl": "Subscription Form Url",
+			"thumbnail": "Thumbnail",
+			"title": "Title",
+			"url": "URL"
+		},
+		"lessons": {
+			"grid-header": "Lessons List",
+			"title": "Lessons",
+			"types": {
+				"other": "Other",
+				"pdf": "PDF",
+				"video": "Video"
+			}
+		},
+		"levels": {
+			"grid-header": "Levels List",
+			"title": "Levels"
+		},
+		"programName": "Program Name",
+		"programStats": "Program Statistics",
+		"programs": {
+			"builder": {
+				"addLevel": "Add Level",
+				"addTask": "Add Task",
+				"finish": "Finish",
+				"next": "Next",
+				"noLevels": "No levels added yet. Click 'Add Level' to start.",
+				"noTasks": "No tasks added to this level yet.",
+				"previous": "Previous",
+				"publishConfirm": "Are you sure you want to publish this program?",
+				"publishNow": "Publish Now",
+				"publishSuccess": "Program published successfully!",
+				"steps": {
+					"curriculum": "Curriculum",
+					"details": "Program Details",
+					"levels": "Levels",
+					"publish": "Publish & Finalize",
+					"thumbnail": "Thumbnail"
+				},
+				"title": "Program Builder",
+				"uploadThumbnail": "Upload Thumbnail"
+			},
+			"errors": {},
+			"grid-header": "Programs List",
+			"statuses": {
+				"cancelled": "Cancelled",
+				"created": "Created",
+				"deleted": "Deleted",
+				"published": "Published",
+				"suspended": "Suspended"
+			},
+			"delete-warning": "This action is irreversible. All levels and tasks associated with this program will be permanently deleted.",
+			"delete-confirm-label": "Please type 'delete' to confirm:",
+			"title": "Programs"
+		},
+		"statistics": "Statistics",
+		"subjects": {
+			"builder": {
+				"title": "Subject Builder",
+				"steps": {
+					"details": "Subject Details",
+					"lessons": "Lessons",
+					"publish": "Publish & Finalize"
+				},
+				"finish": "Finish",
+				"next": "Next",
+				"previous": "Previous",
+				"publishSuccess": "Subject setup complete!",
+				"publishConfirm": "You have successfully configured the subject and its lessons."
+			},
+			"grid-header": "Subjects List",
+			"delete-warning": "This action is irreversible. All lessons associated with this subject will be permanently deleted.",
+			"delete-confirm-label": "Please type 'delete' to confirm:",
+			"title": "Subjects"
+		},
+		"subscribers": "Subscribers",
+		"subscriptions": {
+			"grid-header": "Subscriptions List",
+			"statuses": {
+				"active": "Active",
+				"deleted": "Deleted",
+				"failed": "Failed",
+				"succeeded": "Succeeded",
+				"suspended": "Suspended"
+			},
+			"title": "Subscriptions"
+		},
+		"tasks": {
+			"grid-header": "Tasks List",
+			"title": "Tasks",
+			"types": {
+				"assignment": "Assignment",
+				"lesson": "Lesson"
+			}
+		},
+		"tasksCalendar": "Tasks Calendar",
+		"upcomingTasks": "Upcoming Tasks"
+	}
+}
