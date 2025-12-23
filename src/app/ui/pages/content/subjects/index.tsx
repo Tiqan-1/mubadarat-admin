@@ -8,8 +8,8 @@ import { IconButton, Iconify } from "@/app/ui/components/icon";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import api from "@/app/api/services/subjects";
 import type { Subject } from "@/app/api/services/subjects";
-import { useSubjectModal } from "./use-subject-modal";
-import SubjectModal from "./subject-form-modal";
+// import { useSubjectModal } from "./use-subject-modal";
+// import SubjectModal from "./subject-form-modal";
 import SubjectFilter from "./subject-filter";
 import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
@@ -28,7 +28,7 @@ export default function SubjectPage() {
 	const [confirmText, setConfirmText] = useState("");
 
 	const { data, refetch, isLoading, isFetching } = useQuery({ queryKey: ['subjects', filter], queryFn: () => api.get(filter), refetchOnWindowFocus: false });
-	const { modalProps, onCreate, onEdit } = useSubjectModal(() => refetch());
+	// const { modalProps, onCreate, onEdit } = useSubjectModal(() => refetch());
 	const mutationDelete = useMutation({
 		mutationFn: (id: any) => {
 			// console.log('mutationDelete', id);
@@ -131,9 +131,9 @@ export default function SubjectPage() {
 						>
 							{t("app.subjects.builder.title")}
 						</Button>
-						<Button type="primary" onClick={() => onCreate()}>
+						{/* <Button type="primary" onClick={() => onCreate()}>
 							{t("common.create")}
-						</Button>
+						</Button> */}
 					</Space>
 				}
 			>
@@ -155,7 +155,7 @@ export default function SubjectPage() {
 				/>
 
 
-				<SubjectModal {...modalProps} />
+				{/* <SubjectModal {...modalProps} /> */}
 				<Modal
 					title={t("common.confirm-deleting")}
 					open={deleteModalVisible}
