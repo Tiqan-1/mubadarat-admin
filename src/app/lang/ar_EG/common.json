@@ -1,25 +1,25 @@
 {
-  "common": {
-    "ok": "موافق",
-    "close": "إغلاق",
-    "cancel": "إلغاء",
-    "loading": "جارٍ التحميل...",
-    "save": "حفظ",
-    "delele": "حذف",
-    "reset": "إعادة تعيين",
-    "search": "بحث",
-    "query": "بحث",
-    "input": "يرجى الإدخال",
-    "choose": "يرجى الاختيار",
-    "redo": "تحديث",
-    "back": "رجوع",
-    "light": "فاتح",
-    "dark": "داكن",
-    "action": "الحدث",
-    "create": "إضافة",
-    "edit": "تعديل",
-    "confirm-launch": "تأكيد الإطلاق",
-    "confirm-deleting": "تأكيد الحذف",
-    "view-and-grade": "View & Grade"
-  }
+	"common": {
+		"ok": "موافق",
+		"close": "إغلاق",
+		"cancel": "إلغاء",
+		"loading": "جارٍ التحميل...",
+		"save": "حفظ",
+		"delele": "حذف",
+		"reset": "إعادة تعيين",
+		"search": "بحث",
+		"query": "بحث",
+		"input": "يرجى الإدخال",
+		"choose": "يرجى الاختيار",
+		"redo": "تحديث",
+		"back": "رجوع",
+		"light": "فاتح",
+		"dark": "داكن",
+		"action": "الحدث",
+		"create": "إضافة",
+		"edit": "تعديل",
+		"confirm-launch": "تأكيد الإطلاق",
+		"confirm-deleting": "تأكيد الحذف",
+		"view-and-grade": "View & Grade"
+	}
 }
