@@ -21,6 +21,8 @@
 		"confirm-launch": "Confirm Launch",
 		"confirm-deleting": "Confirm Deleting",
 		"deleted-successfully": "Deleted successfully",
-		"error-occurred": "An error occurred"
+		"error-occurred": "An error occurred",
+		"success": "Success",
+		"error": "Error"
 	}
 }

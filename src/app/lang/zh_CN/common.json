@@ -19,6 +19,10 @@
 		"create": "创建",
 		"edit": "编辑",
 		"confirm-launch": "确认启动",
-		"confirm-deleting": "确认删除"
+		"confirm-deleting": "确认删除",
+		"success": "成功",
+		"error": "错误",
+		"deleted-successfully": "删除成功",
+		"error-occurred": "发生错误"
 	}
 }

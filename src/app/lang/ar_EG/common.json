@@ -20,6 +20,10 @@
 		"edit": "تعديل",
 		"confirm-launch": "تأكيد الإطلاق",
 		"confirm-deleting": "تأكيد الحذف",
-		"view-and-grade": "View & Grade"
+		"view-and-grade": "View & Grade",
+		"success": "تم بنجاح",
+		"error": "حدث خطأ",
+		"deleted-successfully": "تم الحذف بنجاح",
+		"error-occurred": "حدث خطأ ما"
 	}
 }

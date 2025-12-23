@@ -153,6 +153,19 @@
 		},
 		"statistics": "الإحصائيات",
 		"subjects": {
+			"builder": {
+				"title": "منشئ المواد",
+				"steps": {
+					"details": "تفاصيل المادة",
+					"lessons": "الدروس",
+					"publish": "نشر وإنهاء"
+				},
+				"finish": "إنهاء",
+				"next": "التالي",
+				"previous": "السابق",
+				"publishSuccess": "تم إعداد المادة بنجاح!",
+				"publishConfirm": "لقد قمت بتهيئة المادة ودروسها بنجاح."
+			},
 			"grid-header": "قائمة المواد",
 			"title": "المواد"
 		},

@@ -82,6 +82,19 @@
 		},
 		"statistics": "Statistics",
 		"subjects": {
+			"builder": {
+				"title": "Subject Builder",
+				"steps": {
+					"details": "Subject Details",
+					"lessons": "Lessons",
+					"publish": "Publish & Finalize"
+				},
+				"finish": "Finish",
+				"next": "Next",
+				"previous": "Previous",
+				"publishSuccess": "Subject setup complete!",
+				"publishConfirm": "You have successfully configured the subject and its lessons."
+			},
 			"grid-header": "Subjects List",
 			"title": "Subjects"
 		},
