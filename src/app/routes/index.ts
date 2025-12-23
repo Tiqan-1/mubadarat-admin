@@ -1,4 +1,3 @@
-
 import type { Permission } from "@/framework/types/entity";
 import { PermissionType } from "@/framework/types/enum";
 
@@ -24,6 +23,30 @@ const routes: Permission[] = [
 		type: PermissionType.MENU,
 		route: "programs",
 		component: "/content/programs/index.tsx",
+	},
+	{
+		order: 1,
+		id: "programs-builder",
+		parentId: "programs",
+		label: "app.programs.builder.title",
+		name: "Program Builder",
+		icon: "solar:backpack-broken",
+		type: PermissionType.MENU,
+		route: "programs/builder",
+		hide: true,
+		component: "/content/programs/builder/index.tsx",
+	},
+	{
+		order: 1,
+		id: "programs-builder-edit",
+		parentId: "programs",
+		label: "app.programs.builder.title",
+		name: "Program Builder Edit",
+		icon: "solar:backpack-broken",
+		type: PermissionType.MENU,
+		route: "programs/builder/:id",
+		hide: true,
+		component: "/content/programs/builder/index.tsx",
 	},
 	{
 		order: 1,
@@ -100,7 +123,7 @@ const routes: Permission[] = [
 		name: "Assignment responses",
 		icon: "ri:newspaper-line",
 		type: PermissionType.MENU,
-		route: 'assignments/:assignmentId/responses',
+		route: "assignments/:assignmentId/responses",
 		hide: true,
 		component: "/content/assignment-responses/index.tsx",
 		// children: [
@@ -112,7 +135,7 @@ const routes: Permission[] = [
 		// 			name: "Assignment response",
 		// 			icon: "ri:newspaper-line",
 		// 			type: PermissionType.MENU,
-		// 			route: ":responseId", 
+		// 			route: ":responseId",
 		// 			component: "/content/assignment-responses/show.tsx",
 		// 		},
 		// ]
@@ -128,6 +151,6 @@ const routes: Permission[] = [
 		route: "subscriptions",
 		component: "/content/subscriptions/index.tsx",
 	},
-]
+];
 
 export default routes;

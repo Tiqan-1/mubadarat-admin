@@ -1,15 +1,6 @@
 {
   "app": {
-    "dashboard": "لوحة القيادة",
-    "statistics": "الإحصائيات",
-    "averageScore": "متوسط الدرجات",
-    "programStats": "إحصائيات البرامج",
-    "tasksCalendar": "تقويم المهام",
     "activeSubscriptions": "الاشتراكات النشطة",
-    "upcomingTasks": "المهام القادمة",
-    "programName": "اسم البرنامج",
-    "subscribers": "المشتركين",
-    "duration": "المدة",
     "assignmentResponses": {
       "auto-grade": "النتيجة الآلية",
       "correct-answer": "الإجابة الصحيحة",
@@ -56,6 +47,9 @@
         "homework": "واجب منزلي"
       }
     },
+    "averageScore": "متوسط الدرجات",
+    "dashboard": "لوحة القيادة",
+    "duration": "المدة",
     "fields": {
       "assignment": "الواجب",
       "assignments": "الإختبارات",
@@ -111,7 +105,30 @@
       "grid-header": "قائمة المستويات",
       "title": "المستويات"
     },
+    "programName": "اسم البرنامج",
+    "programStats": "إحصائيات البرامج",
     "programs": {
+      "builder": {
+        "addLevel": "إضافة مستوى",
+        "addTask": "إضافة مهمة",
+        "finish": "إنهاء",
+        "next": "التالي",
+        "noLevels": "لم يتم إضافة مستويات بعد. انقر على 'إضافة مستوى' للبدء.",
+        "noTasks": "لم يتم إضافة مهام لهذا المستوى بعد.",
+        "previous": "السابق",
+        "publishConfirm": "هل أنت متأكد من رغبتك في نشر هذا البرنامج؟",
+        "publishNow": "نشر الآن",
+        "publishSuccess": "تم نشر البرنامج بنجاح!",
+        "steps": {
+          "curriculum": "المنهج",
+          "details": "تفاصيل البرنامج",
+          "levels": "المستويات",
+          "publish": "نشر وإنهاء",
+          "thumbnail": "الصورة المصغرة"
+        },
+        "title": "منشئ البرامج",
+        "uploadThumbnail": "رفع الصورة"
+      },
       "errors": {
         "programStartBeforeProgramEnd": "يجب أن يكون تاريخ بدء البرنامج قبل تاريخ انتهاء البرنامج",
         "registrationEndBeforeProgramEnd": "يجب أن يكون تاريخ انتهاء التسجيل قبل تاريخ انتهاء البرنامج",
@@ -132,10 +149,12 @@
         "public": "مفتوح"
       }
     },
+    "statistics": "الإحصائيات",
     "subjects": {
       "grid-header": "قائمة المواد",
       "title": "المواد"
     },
+    "subscribers": "المشتركين",
     "subscriptions": {
       "grid-header": "قائمة الإشتراكات",
       "statuses": {
@@ -151,9 +170,11 @@
       "grid-header": "قائمة المهام",
       "title": "المهام",
       "types": {
-        "lesson": "درس",
-        "assignment": "واجب"
+        "assignment": "واجب",
+        "lesson": "درس"
       }
-    }
+    },
+    "tasksCalendar": "تقويم المهام",
+    "upcomingTasks": "المهام القادمة"
   }
 }
