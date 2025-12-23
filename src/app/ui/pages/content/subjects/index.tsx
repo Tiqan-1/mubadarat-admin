@@ -1,4 +1,4 @@
-import { Button, Card, Divider, Popconfirm, Space } from "antd";
+import { Alert, Button, Card, Divider, Input, Modal, Space } from "antd";
 import Table, { type ColumnsType } from "antd/es/table";
 import { useTranslation } from "react-i18next";
 
@@ -15,12 +15,18 @@ import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
 import Paragraph from "antd/es/typography/Paragraph";
 
+const DELETE_CONFIRM_TEXT = "delete";
+
 export default function SubjectPage() {
 	const navigate = useNavigate();
 	const [searchParams] = useSearchParams();
 	// console.log('params', Object.fromEntries(searchParams.entries()))
 	const { t } = useTranslation();
 	const [filter, setFilter] = useState<any>(Object.fromEntries(searchParams.entries()));
+	const [deleteModalVisible, setDeleteModalVisible] = useState(false);
+	const [subjectToDelete, setSubjectToDelete] = useState<Subject | null>(null);
+	const [confirmText, setConfirmText] = useState("");
+
 	const { data, refetch, isLoading, isFetching } = useQuery({ queryKey: ['subjects', filter], queryFn: () => api.get(filter), refetchOnWindowFocus: false });
 	const { modalProps, onCreate, onEdit } = useSubjectModal(() => refetch());
 	const mutationDelete = useMutation({
@@ -91,11 +97,15 @@ export default function SubjectPage() {
 					{/* <IconButton onClick={() => onEdit(record)}>
 						<Iconify icon="solar:pen-bold-duotone" size={18} />
 					</IconButton> */}
-					<Popconfirm title={t("common.confirm-deleting")} okText={t("common.ok")} cancelText={t("common.cancel")} placement="left" onConfirm={() => onDelete(record)}>
-						<button type="button">
-							<Iconify icon="mingcute:delete-2-fill" size={18} className="text-error" />
-						</button>
-					</Popconfirm>
+					<button
+						type="button"
+						onClick={() => {
+							setSubjectToDelete(record);
+							setDeleteModalVisible(true);
+						}}
+					>
+						<Iconify icon="mingcute:delete-2-fill" size={18} className="text-error" />
+					</button>
 				</div>
 			),
 		},
@@ -146,6 +156,40 @@ export default function SubjectPage() {
 
 
 				<SubjectModal {...modalProps} />
+				<Modal
+					title={t("common.confirm-deleting")}
+					open={deleteModalVisible}
+					onOk={() => {
+						if (subjectToDelete) onDelete(subjectToDelete);
+						setDeleteModalVisible(false);
+						setConfirmText("");
+					}}
+					okButtonProps={{
+						danger: true,
+						disabled: confirmText !== DELETE_CONFIRM_TEXT,
+						loading: mutationDelete.isPending,
+					}}
+					onCancel={() => {
+						setDeleteModalVisible(false);
+						setConfirmText("");
+					}}
+					okText={t("common.delete")}
+					cancelText={t("common.cancel")}
+				>
+					<Space direction="vertical" className="w-full" size="middle">
+						<Alert message={t("app.subjects.delete-warning")} type="warning" showIcon />
+						<div>
+							<div className="mb-2 font-medium">{t("app.subjects.delete-confirm-label")}</div>
+							<Input
+								placeholder={DELETE_CONFIRM_TEXT}
+								value={confirmText}
+								onChange={(e) => setConfirmText(e.target.value)}
+								onPaste={(e) => e.preventDefault()}
+								autoFocus
+							/>
+						</div>
+					</Space>
+				</Modal>
 			</Card>
 
 		</Space>

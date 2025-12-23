@@ -96,6 +96,8 @@
 				"publishConfirm": "You have successfully configured the subject and its lessons."
 			},
 			"grid-header": "Subjects List",
+			"delete-warning": "This action is irreversible. All lessons associated with this subject will be permanently deleted.",
+			"delete-confirm-label": "Please type 'delete' to confirm:",
 			"title": "Subjects"
 		},
 		"subscribers": "Subscribers",

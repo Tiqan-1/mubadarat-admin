@@ -95,6 +95,8 @@
 				"publishConfirm": "您已成功配置科目及其课程。"
 			},
 			"grid-header": "科目列表",
+			"delete-warning": "此操作不可逆。与此科目关联的所有课程都将被永久删除。",
+			"delete-confirm-label": "请输入 “delete” 以确认：",
 			"title": "科目"
 		},
 		"subscribers": "订阅者",
