@@ -1,108 +1,110 @@
 {
-  "app": {
-    "activeSubscriptions": "活跃订阅",
-    "averageScore": "平均分数",
-    "dashboard": "仪表盘",
-    "duration": "持续时间",
-    "fields": {
-      "date": "日期",
-      "description": "描述",
-      "end": "结束于",
-      "file type": "文件类型",
-      "id": "ID",
-      "lesson": "课程",
-      "level": "级别",
-      "name": "名称",
-      "note": "备注",
-      "program": "项目",
-      "programSubscriptionType": "订阅类型",
-      "registration end": "注册结束日期",
-      "registration start": "注册开始日期",
-      "start": "开始于",
-      "state": "状态",
-      "student": "学生",
-      "subject": "科目",
-      "subscriber": "订阅者",
-      "subscription date": "订阅日期",
-      "subscriptionFormUrl": "订阅表单网址",
-      "thumbnail": "缩略图",
-      "title": "标题",
-      "url": "链接"
-    },
-    "lessons": {
-      "grid-header": "课程列表",
-      "title": "课程",
-      "types": {
-        "other": "其他",
-        "pdf": "PDF 文件",
-        "video": "视频"
-      }
-    },
-    "levels": {
-      "grid-header": "级别列表",
-      "title": "级别"
-    },
-    "programName": "项目名称",
-    "programStats": "项目统计",
-    "programs": {
-      "builder": {
-        "addLevel": "添加级别",
-        "addTask": "添加任务",
-        "finish": "完成",
-        "next": "下一步",
-        "noLevels": "尚未添加级别。点击“添加级别”开始。",
-        "noTasks": "该级别尚未添加任务。",
-        "previous": "上一步",
-        "publishConfirm": "您确定要发布此计划吗？",
-        "publishNow": "现在发布",
-        "publishSuccess": "计划发布成功！",
-        "steps": {
-          "curriculum": "课程管理",
-          "details": "计划详情",
-          "levels": "级别",
-          "publish": "发布并完成",
-          "thumbnail": "缩略图"
-        },
-        "title": "项目构建器",
-        "uploadThumbnail": "上传缩略图"
-      },
-      "errors": {},
-      "grid-header": "项目列表",
-      "statuses": {
-        "cancelled": "已取消",
-        "created": "已创建",
-        "deleted": "已删除",
-        "published": "已发布",
-        "suspended": "已暂停"
-      },
-      "title": "项目"
-    },
-    "statistics": "统计",
-    "subjects": {
-      "grid-header": "科目列表",
-      "title": "科目"
-    },
-    "subscribers": "订阅者",
-    "subscriptions": {
-      "grid-header": "订阅列表",
-      "statuses": {
-        "active": "活跃",
-        "deleted": "已删除",
-        "failed": "失败",
-        "succeeded": "成功",
-        "suspended": "已暂停"
-      },
-      "title": "订阅"
-    },
-    "tasks": {
-      "grid-header": "任务列表",
-      "title": "任务",
-      "types": {
-        "assignment": "作业",
-        "lesson": "课程"
-      }
-    },
-    "tasksCalendar": "任务日历",
-    "upcomingTasks": "即将到来的任务"
-  }
+	"app": {
+		"activeSubscriptions": "活跃订阅",
+		"averageScore": "平均分数",
+		"dashboard": "仪表盘",
+		"duration": "持续时间",
+		"fields": {
+			"date": "日期",
+			"description": "描述",
+			"end": "结束于",
+			"file type": "文件类型",
+			"id": "ID",
+			"lesson": "课程",
+			"level": "级别",
+			"name": "名称",
+			"note": "备注",
+			"program": "项目",
+			"programSubscriptionType": "订阅类型",
+			"registration end": "注册结束日期",
+			"registration start": "注册开始日期",
+			"start": "开始于",
+			"state": "状态",
+			"student": "学生",
+			"subject": "科目",
+			"subscriber": "订阅者",
+			"subscription date": "订阅日期",
+			"subscriptionFormUrl": "订阅表单网址",
+			"thumbnail": "缩略图",
+			"title": "标题",
+			"url": "链接"
+		},
+		"lessons": {
+			"grid-header": "课程列表",
+			"title": "课程",
+			"types": {
+				"other": "其他",
+				"pdf": "PDF 文件",
+				"video": "视频"
+			}
+		},
+		"levels": {
+			"grid-header": "级别列表",
+			"title": "级别"
+		},
+		"programName": "项目名称",
+		"programStats": "项目统计",
+		"programs": {
+			"builder": {
+				"addLevel": "添加级别",
+				"addTask": "添加任务",
+				"finish": "完成",
+				"next": "下一步",
+				"noLevels": "尚未添加级别。点击“添加级别”开始。",
+				"noTasks": "该级别尚未添加任务。",
+				"previous": "上一步",
+				"publishConfirm": "您确定要发布此计划吗？",
+				"publishNow": "现在发布",
+				"publishSuccess": "计划发布成功！",
+				"steps": {
+					"curriculum": "课程管理",
+					"details": "计划详情",
+					"levels": "级别",
+					"publish": "发布并完成",
+					"thumbnail": "缩略图"
+				},
+				"title": "项目构建器",
+				"uploadThumbnail": "上传缩略图"
+			},
+			"errors": {},
+			"grid-header": "项目列表",
+			"statuses": {
+				"cancelled": "已取消",
+				"created": "已创建",
+				"deleted": "已删除",
+				"published": "已发布",
+				"suspended": "已暂停"
+			},
+			"delete-warning": "此操作不可逆。与此项目关联的所有级别和任务都将被永久删除。",
+			"delete-confirm-label": "请输入 “delete” 以确认：",
+			"title": "项目"
+		},
+		"statistics": "统计",
+		"subjects": {
+			"grid-header": "科目列表",
+			"title": "科目"
+		},
+		"subscribers": "订阅者",
+		"subscriptions": {
+			"grid-header": "订阅列表",
+			"statuses": {
+				"active": "活跃",
+				"deleted": "已删除",
+				"failed": "失败",
+				"succeeded": "成功",
+				"suspended": "已暂停"
+			},
+			"title": "订阅"
+		},
+		"tasks": {
+			"grid-header": "任务列表",
+			"title": "任务",
+			"types": {
+				"assignment": "作业",
+				"lesson": "课程"
+			}
+		},
+		"tasksCalendar": "任务日历",
+		"upcomingTasks": "即将到来的任务"
+	}
 }
