@@ -1,57 +1,57 @@
-import {  Card, Divider, Popconfirm, Space, Tag } from "antd";
-import Table, { type ColumnsType } from "antd/es/table"; 
+import { Card, Divider, Popconfirm, Space, Tag } from "antd";
+import Table, { type ColumnsType } from "antd/es/table";
 import { useTranslation } from "react-i18next";
- 
+
 import { IconButton, Iconify } from "@/app/ui/components/icon";
- 
+
 
 import { useMutation, useQuery } from "@tanstack/react-query";
 import api from "@/app/api/services/subscriptions";
 import type { Subscription } from "@/app/api/services/subscriptions";
 import { useSubscriptionModal } from "./use-subscription-modal";
 import SubscriptionModal from "./subscription-form-modal";
-import SubscriptionFilter  from "./subscription-filter";
-import { useState } from "react"; 
+import SubscriptionFilter from "./subscription-filter";
+import { useState } from "react";
 import { useSearchParams } from "react-router";
 import type { PresetStatusColorType } from "antd/es/_util/colors";
 // import Paragraph from "antd/es/typography/Paragraph";
- 
- const TagTypes : {[k:string]: PresetStatusColorType} = {
+
+const TagTypes: { [k: string]: PresetStatusColorType } = {
 	'active': "processing",
 	'succeeded': "success",
 	'failed': "default",
 	'suspended': "warning",
 	'deleted': "error",
- }
- // active, suspended, deleted, succeeded, failed
+}
+// active, suspended, deleted, succeeded, failed
 
-export default function SubscriptionPage() { 
+export default function SubscriptionPage() {
 	const [searchParams] = useSearchParams();
 	// console.log('params', Object.fromEntries(searchParams.entries()))
 	const { t } = useTranslation();
 	const [filter, setFilter] = useState<any>(Object.fromEntries(searchParams.entries()));
-    const {data, refetch, isLoading, isFetching} = useQuery({queryKey: ['subscriptions', filter], queryFn: () => api.get(filter), refetchOnWindowFocus:false}); 
-	const {modalProps, onEdit} = useSubscriptionModal(() => refetch()); 
+	const { data, refetch, isLoading, isFetching } = useQuery({ queryKey: ['subscriptions', filter], queryFn: () => api.get(filter), refetchOnWindowFocus: false });
+	const { modalProps, onEdit } = useSubscriptionModal(() => refetch());
 	const mutationDelete = useMutation({
-		mutationFn: (id:any) => {
+		mutationFn: (id: any) => {
 			// console.log('mutationDelete', id);
-			return  api.destroy( id ) ;
+			return api.destroy(id);
 		},
 		onSuccess() {
 			refetch();
 		},
-	}) 
+	})
 
-  
-	function onSearch (data: any)   { 
+
+	function onSearch(data: any) {
 		setFilter(data);
 	};
-	function onClear  ()   {
+	function onClear() {
 		setFilter({});
 	}
 
-	const onDelete = (data: Subscription) => { 
-		mutationDelete.mutate(data.id) 
+	const onDelete = (data: Subscription) => {
+		mutationDelete.mutate(data.id)
 	};
 	const columns: ColumnsType<Subscription> = [
 		// {
@@ -69,12 +69,12 @@ export default function SubscriptionPage() {
 			title: t('app.fields.program'),
 			dataIndex: "description",
 			render: (_, record) => <div>{record.program?.name}</div>,
-		}, 
+		},
 		{
-			title: t('app.fields.level'),
-			dataIndex: "description",
-			render: (_, record) => <div>{record.level?.name}</div>,
-		}, 
+			title: t('app.fields.progressPercentage'),
+			dataIndex: "progressPercentage",
+			render: (_, record) => <div>{record.progressPercentage}%</div>,
+		},
 		{
 			title: t('app.fields.state'),
 			dataIndex: "type",
@@ -84,13 +84,13 @@ export default function SubscriptionPage() {
 			title: t('app.fields.note'),
 			dataIndex: "description",
 			render: (_, record) => <div>{record.notes}</div>,
-		}, 
+		},
 		{
 			title: t("common.action"),
 			dataIndex: "operation",
 			width: 100,
 			render: (_, record) => (
-				<div className="flex w-full justify-end text-gray"> 
+				<div className="flex w-full justify-end text-gray">
 					<IconButton onClick={() => onEdit(record)}>
 						<Iconify icon="solar:pen-bold-duotone" size={18} />
 					</IconButton>
@@ -103,41 +103,41 @@ export default function SubscriptionPage() {
 			),
 		},
 	];
-	 
-  
+
+
 
 	return (
 		<Space direction="vertical" size="large" className="w-full">
 
-			<SubscriptionFilter formValue={filter} okDisabled={(isLoading || isFetching)} onClear={onClear} onSearch={onSearch} /> 
+			<SubscriptionFilter formValue={filter} okDisabled={(isLoading || isFetching)} onClear={onClear} onSearch={onSearch} />
 
-    		<Divider>{t("app.subscriptions.grid-header")}</Divider>
+			<Divider>{t("app.subscriptions.grid-header")}</Divider>
 
 			<Card
 				title={t("app.subscriptions.grid-header")}
-				// extra={ <Button type="primary" onClick={() => onCreate()}> {t('common.create')} </Button> }
+			// extra={ <Button type="primary" onClick={() => onCreate()}> {t('common.create')} </Button> }
 			>
 				<Table
 					rowKey="id"
 					size="small"
 					scroll={{ x: "max-content" }}
 					columns={columns}
-					dataSource={data?.items} 
+					dataSource={data?.items}
 					loading={(isLoading || isFetching)}
 					pagination={{
-					  pageSizeOptions:[10, 30, 50],
-				      current: filter.page ?? 1,
-					  showSizeChanger: true,
-					  showQuickJumper: true,
-					  total: data?.total, 
-					  onChange: (page: number, _pageSize: number) => setFilter({...filter, page, pageSize:_pageSize})
+						pageSizeOptions: [10, 30, 50],
+						current: filter.page ?? 1,
+						showSizeChanger: true,
+						showQuickJumper: true,
+						total: data?.total,
+						onChange: (page: number, _pageSize: number) => setFilter({ ...filter, page, pageSize: _pageSize })
 					}}
 				/>
-	
-	
+
+
 				<SubscriptionModal {...modalProps} />
 			</Card>
-		
+
 		</Space>
 	);
 }
