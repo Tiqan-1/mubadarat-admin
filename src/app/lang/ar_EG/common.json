@@ -24,6 +24,7 @@
 		"success": "تم بنجاح",
 		"error": "حدث خطأ",
 		"deleted-successfully": "تم الحذف بنجاح",
-		"error-occurred": "حدث خطأ ما"
+		"error-occurred": "حدث خطأ ما",
+		"content": "المحتوى"
 	}
 }

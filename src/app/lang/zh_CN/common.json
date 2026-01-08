@@ -23,6 +23,7 @@
 		"success": "成功",
 		"error": "错误",
 		"deleted-successfully": "删除成功",
-		"error-occurred": "发生错误"
+		"error-occurred": "发生错误",
+		"content": "内容"
 	}
 }

@@ -1,19 +1,19 @@
 import type { Assignment } from "./assignments";
-import apiClient, {_cleanParams, _route, type PaginationResponse} from "@/framework/api/BaseApiClient";  
+import apiClient, { _cleanParams, _route, type PaginationResponse } from "@/framework/api/BaseApiClient";
 
 export enum TasksApi {
 	index = "/tasks",
-	create = "/tasks", 
+	create = "/tasks",
 	show = "/tasks/:id",
 	update = "/tasks/:id",
 	delete = "/tasks/:id",
 }
 
-const get = (params: {[key:string]:unknown}) => apiClient.get<PaginationResponse<Task>>({ url: TasksApi.index, params: _cleanParams(params), headers: {'ngrok-skip-browser-warning': 'true'} });
-const show = (id: number|string) => apiClient.get<Task>({ url: _route(TasksApi.show, {id}) });
+const get = (params: { [key: string]: unknown }) => apiClient.get<PaginationResponse<Task>>({ url: TasksApi.index, params: _cleanParams(params), headers: { 'ngrok-skip-browser-warning': 'true' } });
+const show = (id: number | string) => apiClient.get<Task>({ url: _route(TasksApi.show, { id }) });
 const create = (data: CreateRequest) => apiClient.post<Task>({ url: TasksApi.create, data });
-const update = (id: number|string, data: CreateRequest) => apiClient.put({ url: _route(TasksApi.update, {id}), data });
-const destroy = (id: number|string) => apiClient.delete({ url: _route(TasksApi.delete, {id}) });
+const update = (id: number | string, data: CreateRequest) => apiClient.put({ url: _route(TasksApi.update, { id }), data });
+const destroy = (id: number | string) => apiClient.delete({ url: _route(TasksApi.delete, { id }) });
 
 export default {
 	get,
@@ -30,13 +30,17 @@ export default {
 //
 
 // export type B = Omit<Partial<Task>, 'lessons'> & { lessons: string[] };
-export interface CreateRequest extends Omit<Partial<Task>, 'lessons'> { 
-	lessonIds: string[]
-	assignmentId: string
+export interface CreateRequest extends Omit<Partial<Task>, 'lessons'> {
+	lessonIds?: string[]
+	assignmentId?: string
+	meetingLink?: string
+	wirdTitle?: string
+	wirdDetails?: string
 }
 
-export interface Task { 
+export interface Task {
 	id: string
+	type: 'lesson' | 'assignment' | 'meeting' | 'wird'
 	note: string
 	levelId: string
 	programId?: string // for ux
@@ -46,6 +50,9 @@ export interface Task {
 	chatRoomId: string
 	hasChatRoom: boolean
 	assignment?: Assignment
+	meetingLink?: string
+	wirdTitle?: string
+	wirdDetails?: string
 }
 
 export interface Lesson {
@@ -54,4 +61,3 @@ export interface Lesson {
 	type: string
 	url: string
 }
-  

@@ -23,6 +23,7 @@
 		"deleted-successfully": "Deleted successfully",
 		"error-occurred": "An error occurred",
 		"success": "Success",
-		"error": "Error"
+		"error": "Error",
+		"content": "Content"
 	}
 }

@@ -12,6 +12,7 @@
 			"id": "ID",
 			"lesson": "课程",
 			"level": "级别",
+			"meetingLink": "会议链接",
 			"name": "名称",
 			"note": "备注",
 			"program": "项目",
@@ -27,7 +28,10 @@
 			"subscriptionFormUrl": "订阅表单网址",
 			"thumbnail": "缩略图",
 			"title": "标题",
-			"url": "链接"
+			"url": "链接",
+			"type": "类型",
+			"wirdTitle": "Wird 标题",
+			"wirdDetails": "Wird 详情"
 		},
 		"lessons": {
 			"grid-header": "课程列表",
@@ -116,7 +120,9 @@
 			"title": "任务",
 			"types": {
 				"assignment": "作业",
-				"lesson": "课程"
+				"lesson": "课程",
+				"meeting": "会议/直播",
+				"wird": "每日功课 (Wird)"
 			}
 		},
 		"tasksCalendar": "任务日历",

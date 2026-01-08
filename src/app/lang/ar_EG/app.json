@@ -65,6 +65,7 @@
 			"id": "المعرف",
 			"lesson": "الدرس",
 			"level": "المستوى",
+			"meetingLink": "رابط الاجتماع",
 			"name": "الإسم",
 			"note": "الملاحظة",
 			"notes": "الملاحظات",
@@ -87,7 +88,9 @@
 			"thumbnail": "الصورة المصغرة",
 			"title": "العنوان",
 			"type": "النوع",
-			"url": "الرابط"
+			"url": "الرابط",
+			"wirdTitle": "عنوان الورد",
+			"wirdDetails": "تفاصيل الورد"
 		},
 		"lessons": {
 			"grid-header": "قائمة الدروس",
@@ -188,7 +191,9 @@
 			"title": "المهام",
 			"types": {
 				"assignment": "واجب",
-				"lesson": "درس"
+				"lesson": "درس",
+				"meeting": "اجتماع",
+				"wird": "ورد يومي"
 			}
 		},
 		"tasksCalendar": "تقويم المهام",

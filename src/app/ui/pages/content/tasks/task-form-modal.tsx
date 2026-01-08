@@ -68,6 +68,15 @@ export default function TaskModal({ title, show, formValue, okDisabled, onOk, on
 	};
 
 
+	const taskType = Form.useWatch('type', form);
+
+	const taskTypeOptions = [
+		{ value: 'lesson', label: t('app.tasks.types.lesson') },
+		{ value: 'assignment', label: t('app.tasks.types.assignment') },
+		{ value: 'meeting', label: t('app.tasks.types.meeting') },
+		{ value: 'wird', label: t('app.tasks.types.wird') },
+	];
+
 	const dateParser = {
 		getValueProps: (value: any) => ({ value: value && dayjs(value) }),
 		normalize: (value: any) => value && `${dayjs(value).toISOString()}`
@@ -112,27 +121,53 @@ export default function TaskModal({ title, show, formValue, okDisabled, onOk, on
 				</Form.Item>
 			}
 
-
-			<Form.Item<CreateRequest> label={t('app.fields.subject')} name="subjectId">
-				<Select showSearch options={subjectsOptions} onChange={handleChangeSubject}>
-				</Select>
+			<Form.Item<CreateRequest> label={t('app.fields.type')} name="type" rules={[{ required: true }]}>
+				<Select options={taskTypeOptions} />
 			</Form.Item>
 
-			<Form.Item<CreateRequest> label={t('app.lessons.title')} name="lessonIds">
-				<Select
-					mode="multiple"
-					allowClear
-					style={{ width: '100%' }}
-					placeholder="Please select"
-					defaultValue={formValue.lessons?.map((lesson) => lesson.id)}
-					options={lessonsOptions}
-				/>
-			</Form.Item>
+			{taskType === 'lesson' && (
+				<Form.Item<CreateRequest> label={t('app.fields.subject')} name="subjectId">
+					<Select showSearch options={subjectsOptions} onChange={handleChangeSubject}>
+					</Select>
+				</Form.Item>
+			)}
 
-			<Form.Item<CreateRequest> label={t('app.fields.assignment')} name="assignmentId">
-				<Select showSearch options={assignmentsOptions}>
-				</Select>
-			</Form.Item>
+			{taskType === 'lesson' && (
+				<Form.Item<CreateRequest> label={t('app.lessons.title')} name="lessonIds" rules={[{ required: true }]}>
+					<Select
+						mode="multiple"
+						allowClear
+						style={{ width: '100%' }}
+						placeholder="Please select"
+						defaultValue={formValue.lessons?.map((lesson) => lesson.id)}
+						options={lessonsOptions}
+					/>
+				</Form.Item>
+			)}
+
+			{taskType === 'assignment' && (
+				<Form.Item<CreateRequest> label={t('app.fields.assignment')} name="assignmentId" rules={[{ required: true }]}>
+					<Select showSearch options={assignmentsOptions}>
+					</Select>
+				</Form.Item>
+			)}
+
+			{taskType === 'meeting' && (
+				<Form.Item<CreateRequest> label={t('app.fields.meetingLink')} name="meetingLink" rules={[{ required: true }, { type: 'url' }]}>
+					<Input placeholder="https://..." />
+				</Form.Item>
+			)}
+
+			{taskType === 'wird' && (
+				<>
+					<Form.Item<CreateRequest> label={t('app.fields.wirdTitle')} name="wirdTitle" rules={[{ required: true }]}>
+						<Input />
+					</Form.Item>
+					<Form.Item<CreateRequest> label={t('app.fields.wirdDetails')} name="wirdDetails">
+						<Input.TextArea />
+					</Form.Item>
+				</>
+			)}
 
 
 			<Form.Item<CreateRequest> label={t('app.fields.date')} name="date" {...dateParser} rules={[{ required: true }]}>

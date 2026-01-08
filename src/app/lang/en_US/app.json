@@ -13,6 +13,7 @@
 			"id": "ID",
 			"lesson": "Lesson",
 			"level": "Level",
+			"meetingLink": "Meeting Link",
 			"name": "Name",
 			"note": "Note",
 			"program": "Program",
@@ -28,7 +29,10 @@
 			"subscriptionFormUrl": "Subscription Form Url",
 			"thumbnail": "Thumbnail",
 			"title": "Title",
-			"url": "URL"
+			"type": "Type",
+			"url": "URL",
+			"wirdTitle": "Wird Title",
+			"wirdDetails": "Wird Details"
 		},
 		"lessons": {
 			"grid-header": "Lessons List",
@@ -117,7 +121,9 @@
 			"title": "Tasks",
 			"types": {
 				"assignment": "Assignment",
-				"lesson": "Lesson"
+				"lesson": "Lesson",
+				"meeting": "Meeting",
+				"wird": "Daily Wird"
 			}
 		},
 		"tasksCalendar": "Tasks Calendar",
